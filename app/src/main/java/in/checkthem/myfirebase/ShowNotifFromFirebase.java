@@ -37,8 +37,8 @@ public class ShowNotifFromFirebase extends AppCompatActivity {
         mMessageListView = (ListView) findViewById(R.id.messageListView);
 
         final String v = SharedPrefManager.getInstance(this).getVehicleNumber();
-  //      firebaseDatabase=FirebaseDatabase.getInstance();
-//        databaseReference=firebaseDatabase.getReference(""+v).child("complaints");
+        firebaseDatabase=FirebaseDatabase.getInstance();
+        databaseReference=firebaseDatabase.getReference(""+v).child("complaints");
 
         childEventListener=new ChildEventListener() {
             @Override
