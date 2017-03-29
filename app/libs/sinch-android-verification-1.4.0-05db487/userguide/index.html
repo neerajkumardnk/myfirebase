@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>Sinch Verification Android User Guide</title>
+	<meta name="copyright" content="Copyright (c) 2015 Sinch Networks AB. All rights reserved."/>
+	<link type="text/css" rel="stylesheet" href="css/Sinch.css"/>
+</head>
+<body>
+
+<h1 id="introduction">Introduction</h1>
+
+<p>The Sinch Verification SDK makes verifying phone numbers easy. This SDK supports the verification of phone numbers via SMS or flash calls.</p>
+
+<p>This document provides an overview for developers integrating with Sinch Verification SDK for the first time. Please see the <a href="http://www.sinch.com/docs/verification/android/reference/">Reference Documentation</a> for a comprehensive description of all the classes.</p>
+
+<h1 id="firsttimesetup">First time setup</h1>
+
+<p>This is a step-by-step guide about setting up the Sinch Verification SDK for the first time.</p>
+
+<h2 id="registeranapplication">Register an Application</h2>
+
+<ol>
+<li>Register a Sinch Developer account at <a href="http://www.sinch.com/signup">http://www.sinch.com/signup</a>.</li>
+<li>Set up a new Application using the Dashboard, where you can then obtain an <em>Application Key</em>.</li>
+<li>Enable Verification for the application by selecting:
+ <em>Authentication</em> &gt; <em>Public</em> under <em>App</em> &gt; <em>Settings</em> &gt; <em>Verification</em></li>
+</ol>
+
+<h2 id="download">Download</h2>
+
+<p>The Sinch Verification SDK can be downloaded at <a href="http://www.sinch.com/download/">www.sinch.com/download/</a>. It contains: the library aar, this user guide, reference documentation, and a sample app.</p>
+
+<h2 id="addthesinchlibrary">Add the Sinch library</h2>
+
+<p>The Verification SDK library is distributed in <a href="http://tools.android.com/tech-docs/new-build-system/aar-format">AAR</a> format. To use it in your project either:</p>
+
+<ul>
+<li><p>Copy the <strong>.aar</strong> file to the <code>libs</code> folder and edit the build.gradle file to include</p>
+
+<pre><code>repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+dependencies {
+    compile(name:'sinch-android-verification-1.1.7', ext:'aar')
+}
+</code></pre></li>
+<li><p>Or using Android Studio choose <code>File -&gt; New -&gt; New Module -&gt; Import .JAR/.AAR Package</code> option</p></li>
+</ul>
+
+<h1 id="theverificationprocess">The verification process</h1>
+
+<p>Verification of a phone number is performed in two steps: requesting a verification code and verifying the received code.
+ If all of the permissions are provided (see <a href="#permissions">Permissions</a>), the Verification SDK attempts to automatically verify any matching code that is received through SMS or flash call during the verification process.
+ This means that during a flash call verification, the Verification SDK will automatically hang up the incoming call if (and only if) it matches the expected pattern.
+ During an SMS verification, any received messages text will be matched against the template, and if it matches, the code will be extracted and automatically sent to the Sinch backend.
+ The Verification SDK will callback to the <code>VerificationListener</code> during the process, see <a href="#verificationlistener">VerificationListener</a> for more information.</p>
+
+<p>If the permissions needed for automatic verification are not provided, the <code>verify</code> method on the <code>Verification</code> object should be invoked with a user-supplied verification code to verify the phone number.</p>
+
+<p><em>Note: The SDK will abort verification process and trigger the <code>onVerificationFailed</code> callback after a certain time, typically around 20 seconds. However, the SDK will continue to listen for calls for an additional time after the verification has failed, in order to intercept and report any possible late calls.</em></p>
+
+<h2 id="permissions">Permissions</h2>
+
+<p>The <code>android.permission.INTERNET</code> permission is required for the Verification SDK to work.
+To allow the Verification SDK to automatically read incoming SMS messages, use either <code>READ_SMS</code> or <code>RECEIVE_SMS</code>.
+To handle flash call verification automatically, use <code>READ_PHONE_STATE</code>, <code>READ_CALL_LOG</code>, and <code>CALL_PHONE</code>. <code>CALL_PHONE</code> is used to automatically hang up the call.</p>
+
+<p>The full list of permissions:</p>
+
+<pre><code>&lt;uses-permission android:name=&quot;android.permission.INTERNET&quot; /&gt;
+&lt;uses-permission android:name=&quot;android.permission.ACCESS_NETWORK_STATE&quot; /&gt;
+&lt;uses-permission android:name=&quot;android.permission.READ_SMS&quot; /&gt;
+&lt;uses-permission android:name=&quot;android.permission.RECEIVE_SMS&quot; /&gt;
+&lt;uses-permission android:name=&quot;android.permission.READ_CALL_LOG&quot; /&gt;
+&lt;uses-permission android:name=&quot;android.permission.READ_PHONE_STATE&quot; /&gt;
+&lt;uses-permission android:name=&quot;android.permission.CALL_PHONE&quot; /&gt;
+</code></pre>
+
+<h3 id="permissionshandlingonapilevels23orlater.">Permissions handling on API levels 23 or later.</h3>
+
+<p>If your application targets API 23 or later the permissions have to be requested at runtime, see <a href="https://developer.android.com/training/permissions/requesting.html">Runtime Permissions</a>.<br/>
+It is recommended to ask the user for corresponding permissions just before initiating verification. See the sample application for an example.<br/>
+If the verification SDK fails to intercept the code automatically due to missing permissions, the <code>onVerificationFailed</code> callback will be executed with an instance of <code>CodeInterceptionException</code>. In this case it is still possible to proceed with verification by asking the user to enter the code manually.</p>
+
+<h2 id="flashcallverification">Flash Call Verification</h2>
+
+<p>To initiate a flash call verification, start by creating a <code>Verification</code> object through <code>SinchVerification.createFlashCallVerification</code>, then start the verification process by invoking <code>initiate()</code> on the <code>Verification</code> object. This method can be called multiple times, for example if another call should be placed.</p>
+
+<pre><code>Config config = SinchVerification.config().applicationKey(APPLICATION_KEY).context(getApplicationContext()).build();
+VerificationListener listener = new MyVerificationListener();
+String defaultRegion = PhoneNumberUtils.getDefaultCountryIso();
+String phoneNumberInE164 = PhoneNumberUtils.formatNumberToE164(phoneNumberString, defaultRegion);
+Verification verification = SinchVerification.createFlashCallVerification(config, phoneNumberInE164, listener);
+verification.initiate();
+</code></pre>
+
+<p><em>IMPORTANT</em>: It is important to pass <code>ApplicationContext</code> to the verification config builder, as the verification object might outlive the activity or fragment it is instantiated from.</p>
+
+<h2 id="smsverification">SMS Verification</h2>
+
+<p>To initiate an SMS verification, start by creating a <code>Verification</code> object through <code>SinchVerification.createSmsVerification</code>, then start the verification process by invoking <code>initiate()</code> on the <code>Verification</code> object. This method can be called multiple times, for example, if another SMS should be sent.</p>
+
+<pre><code>Config config = SinchVerification.config().applicationKey(APPLICATION_KEY).context(getApplicationContext()).build();
+VerificationListener listener = new MyVerificationListener();
+String defaultRegion = PhoneNumberUtils.getDefaultCountryIso();
+String phoneNumberInE164 = PhoneNumberUtils.formatNumberToE164(phoneNumberString, defaultRegion);
+Verification verification = SinchVerification.createSmsVerification(config, phoneNumberInE164, listener);
+verification.initiate();
+</code></pre>
+
+<p>A <code>VerificationListener</code> object must be provided.</p>
+
+<h3 id="setthelanguageofansmsverification">Set the language of an SMS verification</h3>
+
+<p>It is possible to specify the content language for SMS verification. This is specified via a list of <a href="https://tools.ietf.org/html/rfc3282">IETF</a> language tags in order of priority. If the first language is not available, the next one will be selected and so forth. The default is &#8216;en-US&#8217;. The actual language selected can be retrieved by calling <code>selectedLanguage()</code> method of the <code>InitiationResult</code> object passed to <code>onInitiated()</code> callback. For example:</p>
+
+<pre><code>List&lt;String&gt; languages = new ArrayList();
+languages.add(&quot;es-ES&quot;);
+Verification verification = SinchVerification.createSmsVerification(config, phoneNumberInE164, null, languages, new VerificationListener() {
+    @Override
+    public void onInitiated(InitiationResult result) {
+        // Verification initiated
+        Log.i(&quot;Selected sms language: &quot; + result.selectedLanguage());
+    }
+    ...
+});
+</code></pre>
+
+<p>Contact us at <a href="&#109;&#97;&#105;&#108;&#x74;&#111;&#x3a;&#x64;&#x65;&#118;&#x40;&#x73;&#x69;&#x6e;&#99;&#104;&#46;&#99;&#111;&#109;">&#100;&#101;&#x76;&#64;&#115;&#x69;&#x6e;&#x63;&#x68;&#46;&#x63;&#x6f;&#109;</a> for the list of available languages for your application.</p>
+
+<p>Note: The content language specified can be overridden by carrier provider specific templates, due to compliance and legal requirements, such as <a href="https://www.usshortcodes.com/info/static/docs/CTIA%20Short%20Code%20Monitoring%20Handbook%20v1.5.2.pdf">US shortcode requirements (pdf)</a>.</p>
+
+<h2 id="verificationlistener">Verification listener</h2>
+
+<p>The <code>VerificationListener</code> provides callbacks during the verification process. If initiation is successful, the <code>onInitiated()</code> callback runs and the verification code interceptor is started automatically. If initiation fails, the <code>onInitiationError()</code> callback runs and the exception describing the error is passed. If code verification is successful, the <code>onVerified()</code> callback is called. If verification fails, <code>onVerificationError()</code> callback runs and the exception describing the error is passed.</p>
+
+<pre><code>VerificationListener listener = new VerificationListener() {
+    @Override
+    public void onInitiated(InitiationResult result) {
+        // Verification initiated
+    }
+    @Override
+    public void onInitiationFailed(Exception e) {
+        if (e instanceof InvalidInputException) {
+            // Incorrect number provided
+        } else if (e instanceof ServiceErrorException) {
+            // Verification initiation aborted due to early reject feature,
+            // client callback denial, or some other Sinch service error.
+            // Fallback to other verification method here.
+        } else {
+            // Other system error, such as UnknownHostException in case of network error
+        }
+    }
+    @Override
+    public void onVerified() {
+        // Verification successful
+    }
+    @Override
+    public void onVerificationFailed(Exception e) {
+        if (e instanceof InvalidInputException) {
+            // Incorrect number or code provided
+        } else if (e instanceof CodeInterceptionException) {
+            // Intercepting the verification code automatically failed, input the code manually with verify()
+        } else if (e instanceof IncorrectCodeException) {
+            // The verification code provided was incorrect
+        } else if (e instanceof ServiceErrorException) {
+            // Sinch service error
+        } else {
+            // Other system error, such as UnknownHostException in case of network error
+        }
+    }
+}
+</code></pre>
+
+<h3 id="phonenumbers">Phone numbers</h3>
+
+<p><em>IMPORTANT</em>: The phone number should be specified according to the E.164 number formatting (http://en.wikipedia.org/wiki/E.164) recommendation and should be prefixed with a <code>+</code>. See the section <a href="#phonenumbers">Phone numbers</a> for details.</p>
+
+<h2 id="validatecodemanually">Validate code manually</h2>
+
+<p>To complete the verification of the phone number, the code should be passed to <code>verify</code>. For SMS verification, the code is in the message body. For flash calls, the caller id is the code.
+ Example:</p>
+
+<pre><code>verification.verify(code); 
+</code></pre>
+
+<p>The method <code>verify</code> may be invoked multiple times. For example, if the verification listener is invoked with an <code>IncorrectCodeException</code>, the application may hint to the user that the code was incorrect, let the user adjust it, and call <code>verify</code> again on the same verification instance.</p>
+
+<h2 id="earlyreject.">Early reject.</h2>
+
+<p>If Sinch knows that verification is most likely to fail, an application can be configured to catch this condition and provide means to fallback fast to other verification methods. In this case the verification listener <code>onInitiationFailed()</code> callback will be executed with an instance of <code>ServiceErrorException</code>. To enable this feature contact us at <a href="&#109;&#97;&#x69;&#108;&#x74;&#x6f;&#x3a;&#100;&#x65;&#118;&#x40;&#x73;&#105;&#x6e;&#x63;&#x68;&#x2e;&#x63;&#x6f;&#109;">&#x64;&#x65;&#118;&#x40;&#x73;&#105;&#x6e;&#99;&#x68;&#46;&#99;&#x6f;&#x6d;</a></p>
+
+<h2 id="networkconnectivityerrors">Network connectivity errors</h2>
+
+<p>The Sinch Verification SDK will try to resend HTTP requests to the Sinch backend if a request failed due to a network related error. The SDK schedules a number of retries for approximately 30 seconds. If sending the HTTP request is still unsuccessful, it eventually invokes the verification listener <code>onInitiationError</code> or <code>onVerificationError</code> with an exception that indicates the problem, for example, <code>java.net.UnknownHostException</code>.</p>
+
+<h2 id="passdatatoyourbackend">Pass data to your backend</h2>
+
+<p>For each call to <code>Verification.initiate()</code>, the Sinch backend can perform a callback to the application backend to allow or disallow an SMS or flashcall being initiated. By using the optional parameter <code>custom</code> on <code>SinchVerification.createFlashCallVerification</code> and <code>createSmsVerification</code>, any unique identifier can be passed from the application to the application backend. The data will be passed as a string. If there is a need for a more complex datatype, it needs to be stringified or encoded before being sent.</p>
+
+<h1 id="phonenumbers">Phone numbers</h1>
+
+<p>The phone number should be specified according to the E.164 number formatting (http://en.wikipedia.org/wiki/E.164) recommendation and should be prefixed with a <code>+</code>. For example, to verify the US phone number 415 555 0101, the phone number should be specified as <code>+14155550101</code>. The <code>+</code> is the required prefix and the US country code <code>1</code> prepended to the local subscriber number.</p>
+
+<p>The Sinch SDK provides APIs for formatting phone numbers. The primary class for this functionality is <code>PhoneNumberUtils</code>. A key thing when parsing user input as a phone number is the concept of <em>default region</em>; if a user enters their number in a local format, the parsing must know which region / country to assume. Example:</p>
+
+<pre><code class="java">// Get user's current region by carrier info
+String defaultRegion = PhoneNumberUtils.getDefaultCountryIso();
+</code></pre>
+
+<p><em>IMPORTANT</em>: When passing a number as a string to create a <code>Verification</code>, the string should contain a number in <em>E.164</em> format.</p>
+
+<p>A number can be formatted as <em>E.164</em> like this:</p>
+
+<pre><code class="java">String phoneNumberInE164 = PhoneNumberUtils.formatNumberToE164(phoneNumberString, defaultRegion);
+</code></pre>
+
+<h1 id="improvingverificationperformancewithagreatui">Improving verification performance with a great UI</h1>
+
+<p>For better verification performance, it should be straightforward and easy for users to enter their phone phone numbers. To simplify this step and build a UI that accurately captures the correct input from the users, the Sinch SDK provides some utility APIs.</p>
+
+<h2 id="phonenumberformattingtextwatcher">PhoneNumberFormattingTextWatcher</h2>
+
+<p>The Sinch SDK provides a <code>PhoneNumberFormattingTextWatcher</code> class that behaves exactly like the system android version <a href="http://developer.android.com/reference/android/telephony/PhoneNumberFormattingTextWatcher.html">PhoneNumberFormattingTextWatcher</a>, but allows specifying a region other than the system one when using APIs before 21. This watcher can be added as a text changed listener to a text field and will format it automatically if a phone number is entered in local or international format.</p>
+
+<h2 id="viablephonenumbercheck">Viable phone number check</h2>
+
+<p>The <code>isPossibleNumber</code> method in <code>PhoneNumberUtils</code> can be used to give the user a hint whether the entered phone number is a viable one in the specified region by for example highlighting the text field with a different color.</p>
+
+<h1 id="miscellaneous">Miscellaneous</h1>
+
+<h2 id="minimumrequirements">Minimum requirements</h2>
+
+<p>Android SDK version 9 is the minimum version required for using the Sinch Verification SDK.</p>
+
+<h2 id="proguard">ProGuard</h2>
+
+<p>If
+<a href="https://developer.android.com/studio/build/shrink-code.html">ProGuard</a>
+is used to shrink an artifact (e.g. an APK) that is consuming the Sinch
+Verification library, the <em>ProGuard</em> rules defined in the file
+<code>proguard-rules.pro</code>, which is included in the SDK package, must be
+applied.</p>
+
+<h2 id="encryptionexportregulations">Encryption export regulations</h2>
+
+<p>Please check the Summary of U.S. Export Controls Applicable to Commercial Encryption Products and ensure that the application is registered for the Encryption Regulations, if applicable. It can be found under this <a href="http://www.sinch.com/export">link</a>.</p>
+
+</body>
+</html>

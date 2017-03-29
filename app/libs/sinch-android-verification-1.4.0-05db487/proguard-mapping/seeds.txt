@@ -1,0 +1,302 @@
+com.sinch.httpclient.AndroidAsyncTask: void onPostExecute(java.lang.Object)
+com.sinch.httpclient.AndroidAsyncTask: void onCancelled(java.lang.Object)
+com.sinch.sanalytics.client.Client
+com.sinch.sanalytics.client.Client: com.sinch.sanalytics.client.Logger logger()
+com.sinch.sanalytics.client.Client: void flush()
+com.sinch.sanalytics.client.ClientBuilder
+com.sinch.sanalytics.client.ClientBuilder: com.sinch.sanalytics.client.ClientBuilder databaseDirectory(java.lang.String)
+com.sinch.sanalytics.client.ClientBuilder: com.sinch.sanalytics.client.ClientBuilder appId(java.lang.String)
+com.sinch.sanalytics.client.ClientBuilder: com.sinch.sanalytics.client.ClientBuilder appVersion(java.lang.String)
+com.sinch.sanalytics.client.ClientBuilder: com.sinch.sanalytics.client.ClientBuilder logSessionId(java.lang.String)
+com.sinch.sanalytics.client.ClientBuilder: com.sinch.sanalytics.client.ClientBuilder deviceId(java.lang.String)
+com.sinch.sanalytics.client.ClientBuilder: com.sinch.sanalytics.client.ClientBuilder baseUrl(java.net.URL)
+com.sinch.sanalytics.client.ClientBuilder: com.sinch.sanalytics.client.ClientBuilder flushInterval(long,java.util.concurrent.TimeUnit)
+com.sinch.sanalytics.client.ClientBuilder: com.sinch.sanalytics.client.Client build()
+com.sinch.sanalytics.client.DefaultClientBuilder
+com.sinch.sanalytics.client.DefaultClientBuilder: java.lang.String mDbDir
+com.sinch.sanalytics.client.DefaultClientBuilder: java.lang.String mAppId
+com.sinch.sanalytics.client.DefaultClientBuilder: java.lang.String mAppVersion
+com.sinch.sanalytics.client.DefaultClientBuilder: java.lang.String mLogSessionId
+com.sinch.sanalytics.client.DefaultClientBuilder: java.lang.String mDeviceId
+com.sinch.sanalytics.client.DefaultClientBuilder: java.net.URL mBaseURL
+com.sinch.sanalytics.client.DefaultClientBuilder: long mFlushIntervalMs
+com.sinch.sanalytics.client.DefaultClientBuilder: boolean $assertionsDisabled
+com.sinch.sanalytics.client.DefaultClientBuilder: DefaultClientBuilder()
+com.sinch.sanalytics.client.DefaultClientBuilder: com.sinch.sanalytics.client.DefaultClientBuilder builder()
+com.sinch.sanalytics.client.DefaultClientBuilder: com.sinch.sanalytics.client.Client build()
+com.sinch.sanalytics.client.DefaultClientBuilder: com.sinch.sanalytics.client.ClientBuilder databaseDirectory(java.lang.String)
+com.sinch.sanalytics.client.DefaultClientBuilder: com.sinch.sanalytics.client.ClientBuilder appId(java.lang.String)
+com.sinch.sanalytics.client.DefaultClientBuilder: com.sinch.sanalytics.client.ClientBuilder appVersion(java.lang.String)
+com.sinch.sanalytics.client.DefaultClientBuilder: com.sinch.sanalytics.client.ClientBuilder logSessionId(java.lang.String)
+com.sinch.sanalytics.client.DefaultClientBuilder: com.sinch.sanalytics.client.ClientBuilder deviceId(java.lang.String)
+com.sinch.sanalytics.client.DefaultClientBuilder: com.sinch.sanalytics.client.ClientBuilder baseUrl(java.net.URL)
+com.sinch.sanalytics.client.DefaultClientBuilder: com.sinch.sanalytics.client.ClientBuilder flushInterval(long,java.util.concurrent.TimeUnit)
+com.sinch.sanalytics.client.DefaultClientBuilder: void checkStringParam(java.lang.String,java.lang.String)
+com.sinch.sanalytics.client.DefaultClientBuilder: void <clinit>()
+com.sinch.sanalytics.client.DeviceInfo
+com.sinch.sanalytics.client.DeviceInfo: java.lang.String platformVersion()
+com.sinch.sanalytics.client.DeviceInfo: java.lang.String locale()
+com.sinch.sanalytics.client.DeviceInfo: java.util.List MCCs()
+com.sinch.sanalytics.client.HttpClient
+com.sinch.sanalytics.client.HttpClient: void sendHttpRequest(java.lang.String,java.lang.String,java.util.Map,byte[],com.sinch.sanalytics.client.HttpRequestCallback)
+com.sinch.sanalytics.client.HttpRequestCallback
+com.sinch.sanalytics.client.HttpRequestCallback: void complete(int,java.util.Map,byte[])
+com.sinch.sanalytics.client.HttpRequestCallback: void completeExceptionally(java.lang.Exception)
+com.sinch.sanalytics.client.LocalLogging
+com.sinch.sanalytics.client.LocalLogging: void setMinimumSeverity(com.sinch.sanalytics.client.LogSeverity)
+com.sinch.sanalytics.client.LocalLogging: void _setMinimumSeverity(byte)
+com.sinch.sanalytics.client.LocalLogging: LocalLogging()
+com.sinch.sanalytics.client.LogSeverity
+com.sinch.sanalytics.client.LogSeverity: com.sinch.sanalytics.client.LogSeverity ALERT
+com.sinch.sanalytics.client.LogSeverity: com.sinch.sanalytics.client.LogSeverity CRITICAL
+com.sinch.sanalytics.client.LogSeverity: com.sinch.sanalytics.client.LogSeverity ERROR
+com.sinch.sanalytics.client.LogSeverity: com.sinch.sanalytics.client.LogSeverity WARNING
+com.sinch.sanalytics.client.LogSeverity: com.sinch.sanalytics.client.LogSeverity NOTICE
+com.sinch.sanalytics.client.LogSeverity: com.sinch.sanalytics.client.LogSeverity INFO
+com.sinch.sanalytics.client.LogSeverity: com.sinch.sanalytics.client.LogSeverity DEBUG
+com.sinch.sanalytics.client.LogSeverity: byte mValue
+com.sinch.sanalytics.client.LogSeverity: com.sinch.sanalytics.client.LogSeverity[] $VALUES
+com.sinch.sanalytics.client.LogSeverity: boolean $assertionsDisabled
+com.sinch.sanalytics.client.LogSeverity: com.sinch.sanalytics.client.LogSeverity[] values()
+com.sinch.sanalytics.client.LogSeverity: com.sinch.sanalytics.client.LogSeverity valueOf(java.lang.String)
+com.sinch.sanalytics.client.LogSeverity: LogSeverity(java.lang.String,int,int)
+com.sinch.sanalytics.client.LogSeverity: com.sinch.sanalytics.client.LogSeverity fromValue(int)
+com.sinch.sanalytics.client.LogSeverity: byte value()
+com.sinch.sanalytics.client.LogSeverity: boolean isValid(int)
+com.sinch.sanalytics.client.LogSeverity: void <clinit>()
+com.sinch.sanalytics.client.Logger
+com.sinch.sanalytics.client.Logger: void log(com.sinch.sanalytics.client.LogSeverity,java.lang.String)
+com.sinch.sanalytics.client.Logger: void log(com.sinch.sanalytics.client.LogSeverity,java.util.Map)
+com.sinch.sanalytics.client.Logger: void log(com.sinch.sanalytics.client.LogSeverity,java.lang.String,java.util.Map)
+com.sinch.sanalytics.client.NativeLibJARLoader
+com.sinch.sanalytics.client.NativeLibJARLoader: NativeLibJARLoader()
+com.sinch.sanalytics.client.NativeLibJARLoader: void loadLibraryFromJar(java.lang.String)
+com.sinch.sanalytics.client.NativeLibJARLoader: void loadLibraryFromStream(java.io.InputStream)
+com.sinch.sanalytics.client.NativeLibJARLoader: java.lang.String[] getCandidateLibraryPaths(java.lang.String)
+com.sinch.sanalytics.client.NativeLibJARLoader: java.io.InputStream tryGetResourceAtPaths(java.lang.String[])
+com.sinch.sanalytics.client.NativeLibJARLoader: java.lang.String getFileExtension(java.lang.String)
+com.sinch.sanalytics.client.NativeLibJARLoader: void copy(java.io.InputStream,java.io.OutputStream)
+com.sinch.sanalytics.client.NativeLibJARLoader: java.lang.String toCommaSeparatedString(java.lang.String[])
+com.sinch.sanalytics.client.NativeLibLoader
+com.sinch.sanalytics.client.NativeLibLoader: NativeLibLoader()
+com.sinch.sanalytics.client.NativeLibLoader: void loadLibrary(java.lang.String)
+com.sinch.sanalytics.client.NativeLibLoader: void loadLibraryFromStream(java.io.InputStream)
+com.sinch.sanalytics.client.NativeLibraryException
+com.sinch.sanalytics.client.NativeLibraryException: NativeLibraryException(java.lang.String,java.lang.Throwable)
+com.sinch.sanalytics.client.SystemPreferences
+com.sinch.sanalytics.client.SystemPreferences: boolean contains(java.lang.String)
+com.sinch.sanalytics.client.SystemPreferences: java.lang.String getString(java.lang.String)
+com.sinch.sanalytics.client.SystemPreferences: void putString(java.lang.String,java.lang.String)
+com.sinch.sanalytics.client.SystemPreferences: void clear()
+com.sinch.sanalytics.client.android.AndroidClientBuilder
+com.sinch.sanalytics.client.android.AndroidClientBuilder: AndroidClientBuilder()
+com.sinch.sanalytics.client.android.AndroidClientBuilder: com.sinch.sanalytics.client.ClientBuilder builder(android.content.Context)
+com.sinch.sanalytics.client.android.AndroidClientBuilder: com.sinch.sanalytics.client.Client buildNoOpClient()
+com.sinch.sanalytics.client.android.DefaultGlobalNativeLibLoader
+com.sinch.sanalytics.client.android.DefaultGlobalNativeLibLoader: java.lang.String LIBRARY_NAME
+com.sinch.sanalytics.client.android.DefaultGlobalNativeLibLoader: java.util.concurrent.locks.Lock sNativeLibraryLoadLock
+com.sinch.sanalytics.client.android.DefaultGlobalNativeLibLoader: boolean sNativeLibraryIsLoaded
+com.sinch.sanalytics.client.android.DefaultGlobalNativeLibLoader: DefaultGlobalNativeLibLoader()
+com.sinch.sanalytics.client.android.DefaultGlobalNativeLibLoader: boolean isNativeLibraryIsLoaded()
+com.sinch.sanalytics.client.android.DefaultGlobalNativeLibLoader: void loadNativeLibrary(java.io.InputStream)
+com.sinch.sanalytics.client.android.DefaultGlobalNativeLibLoader: void loadNativeLibraryFromDefaultLocation()
+com.sinch.sanalytics.client.android.DefaultGlobalNativeLibLoader: void <clinit>()
+com.sinch.sanalytics.client.android.DefaultSystemPreferences
+com.sinch.sanalytics.client.android.DefaultSystemPreferences: android.content.SharedPreferences mPreferences
+com.sinch.sanalytics.client.android.DefaultSystemPreferences: DefaultSystemPreferences(android.content.Context)
+com.sinch.sanalytics.client.android.DefaultSystemPreferences: boolean contains(java.lang.String)
+com.sinch.sanalytics.client.android.DefaultSystemPreferences: java.lang.String getString(java.lang.String)
+com.sinch.sanalytics.client.android.DefaultSystemPreferences: void putString(java.lang.String,java.lang.String)
+com.sinch.sanalytics.client.android.DefaultSystemPreferences: void clear()
+com.sinch.sanalytics.client.android.DefaultSystemPreferencesProvider
+com.sinch.sanalytics.client.android.DefaultSystemPreferencesProvider: DefaultSystemPreferencesProvider()
+com.sinch.sanalytics.client.android.DefaultSystemPreferencesProvider: com.sinch.sanalytics.client.SystemPreferences newInstance(java.lang.Object)
+com.sinch.sanalytics.client.android.DefaultSystemPreferencesProvider: java.lang.Object newInstance(java.lang.Object)
+com.sinch.sanalytics.client.android.InternalLog
+com.sinch.sanalytics.client.android.InternalLog: java.lang.String TAG
+com.sinch.sanalytics.client.android.InternalLog: InternalLog()
+com.sinch.sanalytics.client.android.InternalLog: void d(java.lang.String)
+com.sinch.sanalytics.client.android.InternalLog: void w(java.lang.String,java.lang.Throwable)
+com.sinch.sanalytics.client.android.InternalLog: void w(java.lang.String)
+com.sinch.sanalytics.client.android.LocalLogging
+com.sinch.sanalytics.client.android.LocalLogging: void setMinimumSeverity(com.sinch.sanalytics.client.LogSeverity)
+com.sinch.sanalytics.client.android.LocalLogging: LocalLogging()
+com.sinch.sanalytics.client.android.NoOpClient
+com.sinch.sanalytics.client.android.NoOpClient: NoOpClient()
+com.sinch.sanalytics.client.android.NoOpClient: com.sinch.sanalytics.client.Logger logger()
+com.sinch.sanalytics.client.android.NoOpClient: void flush()
+com.sinch.sanalytics.client.android.NoOpClient: void log(com.sinch.sanalytics.client.LogSeverity,java.lang.String)
+com.sinch.sanalytics.client.android.NoOpClient: void log(com.sinch.sanalytics.client.LogSeverity,java.util.Map)
+com.sinch.sanalytics.client.android.NoOpClient: void log(com.sinch.sanalytics.client.LogSeverity,java.lang.String,java.util.Map)
+com.sinch.sanalytics.client.android.NoOpClientBuilder
+com.sinch.sanalytics.client.android.NoOpClientBuilder: NoOpClientBuilder()
+com.sinch.sanalytics.client.android.NoOpClientBuilder: com.sinch.sanalytics.client.ClientBuilder databaseDirectory(java.lang.String)
+com.sinch.sanalytics.client.android.NoOpClientBuilder: com.sinch.sanalytics.client.ClientBuilder appId(java.lang.String)
+com.sinch.sanalytics.client.android.NoOpClientBuilder: com.sinch.sanalytics.client.ClientBuilder appVersion(java.lang.String)
+com.sinch.sanalytics.client.android.NoOpClientBuilder: com.sinch.sanalytics.client.ClientBuilder logSessionId(java.lang.String)
+com.sinch.sanalytics.client.android.NoOpClientBuilder: com.sinch.sanalytics.client.ClientBuilder deviceId(java.lang.String)
+com.sinch.sanalytics.client.android.NoOpClientBuilder: com.sinch.sanalytics.client.ClientBuilder baseUrl(java.net.URL)
+com.sinch.sanalytics.client.android.NoOpClientBuilder: com.sinch.sanalytics.client.ClientBuilder flushInterval(long,java.util.concurrent.TimeUnit)
+com.sinch.sanalytics.client.android.NoOpClientBuilder: com.sinch.sanalytics.client.Client build()
+com.sinch.sanalytics.client.jni.ApplicationContext
+com.sinch.sanalytics.client.jni.ApplicationContext: ApplicationContext()
+com.sinch.sanalytics.client.jni.ApplicationContext: void initApplicationContext(java.lang.Object)
+com.sinch.sanalytics.client.jni.ClassLoaderDummy
+com.sinch.sanalytics.client.jni.ClassLoaderDummy: ClassLoaderDummy()
+com.sinch.sanalytics.client.jni.DefaultClient
+com.sinch.sanalytics.client.jni.DefaultClient: com.sinch.sanalytics.client.jni.NativeObjectRef mNativeObject
+com.sinch.sanalytics.client.jni.DefaultClient: boolean $assertionsDisabled
+com.sinch.sanalytics.client.jni.DefaultClient: DefaultClient(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.net.URL,long)
+com.sinch.sanalytics.client.jni.DefaultClient: void finalize()
+com.sinch.sanalytics.client.jni.DefaultClient: com.sinch.sanalytics.client.Logger logger()
+com.sinch.sanalytics.client.jni.DefaultClient: void flush()
+com.sinch.sanalytics.client.jni.DefaultClient: void log(com.sinch.sanalytics.client.LogSeverity,java.lang.String)
+com.sinch.sanalytics.client.jni.DefaultClient: void log(com.sinch.sanalytics.client.LogSeverity,java.util.Map)
+com.sinch.sanalytics.client.jni.DefaultClient: void log(com.sinch.sanalytics.client.LogSeverity,java.lang.String,java.util.Map)
+com.sinch.sanalytics.client.jni.DefaultClient: com.sinch.sanalytics.client.jni.NativeObjectRef getNativeRef()
+com.sinch.sanalytics.client.jni.DefaultClient: boolean createNativeObject(java.util.Map)
+com.sinch.sanalytics.client.jni.DefaultClient: void destroyNativeObject()
+com.sinch.sanalytics.client.jni.DefaultClient: void _logString(byte,java.lang.String)
+com.sinch.sanalytics.client.jni.DefaultClient: void _logMap(byte,java.util.Map)
+com.sinch.sanalytics.client.jni.DefaultClient: void _logStringAndMap(byte,java.lang.String,java.util.Map)
+com.sinch.sanalytics.client.jni.DefaultClient: void <clinit>()
+com.sinch.sanalytics.client.jni.DefaultNativeObjectRef
+com.sinch.sanalytics.client.jni.DefaultNativeObjectRef: long mNativeAddress
+com.sinch.sanalytics.client.jni.DefaultNativeObjectRef: java.util.concurrent.locks.Lock mNativeObjectLock
+com.sinch.sanalytics.client.jni.DefaultNativeObjectRef: DefaultNativeObjectRef()
+com.sinch.sanalytics.client.jni.DefaultNativeObjectRef: void lock()
+com.sinch.sanalytics.client.jni.DefaultNativeObjectRef: void unlock()
+com.sinch.sanalytics.client.jni.DefaultNativeObjectRef: void setNativeObject(long)
+com.sinch.sanalytics.client.jni.DefaultNativeObjectRef: long getNativeObject()
+com.sinch.sanalytics.client.jni.HttpRequestCallback
+com.sinch.sanalytics.client.jni.HttpRequestCallback: com.sinch.sanalytics.client.jni.NativeObjectRef mNativeObject
+com.sinch.sanalytics.client.jni.HttpRequestCallback: HttpRequestCallback()
+com.sinch.sanalytics.client.jni.HttpRequestCallback: void complete(int,java.util.Map,byte[])
+com.sinch.sanalytics.client.jni.HttpRequestCallback: void completeExceptionally(java.lang.Exception)
+com.sinch.sanalytics.client.jni.HttpRequestCallback: com.sinch.sanalytics.client.jni.NativeObjectRef getNativeRef()
+com.sinch.sanalytics.client.jni.NativeObjectHolder
+com.sinch.sanalytics.client.jni.NativeObjectHolder: com.sinch.sanalytics.client.jni.NativeObjectRef getNativeRef()
+com.sinch.sanalytics.client.jni.NativeObjectRef
+com.sinch.sanalytics.client.jni.NativeObjectRef: void lock()
+com.sinch.sanalytics.client.jni.NativeObjectRef: void unlock()
+com.sinch.sanalytics.client.jni.NativeObjectRef: void setNativeObject(long)
+com.sinch.sanalytics.client.jni.NativeObjectRef: long getNativeObject()
+com.sinch.sanalytics.client.spi.AbstractServiceProvider
+com.sinch.sanalytics.client.spi.AbstractServiceProvider: java.util.concurrent.locks.Lock mLock
+com.sinch.sanalytics.client.spi.AbstractServiceProvider: com.sinch.sanalytics.client.spi.Provider mProvider
+com.sinch.sanalytics.client.spi.AbstractServiceProvider: AbstractServiceProvider()
+com.sinch.sanalytics.client.spi.AbstractServiceProvider: void registerProvider(com.sinch.sanalytics.client.spi.Provider)
+com.sinch.sanalytics.client.spi.AbstractServiceProvider: java.lang.Object newInstance(java.lang.Object)
+com.sinch.sanalytics.client.spi.DeviceInfo
+com.sinch.sanalytics.client.spi.DeviceInfo: com.sinch.sanalytics.client.spi.DeviceInfo$Impl sServiceProvider
+com.sinch.sanalytics.client.spi.DeviceInfo: DeviceInfo()
+com.sinch.sanalytics.client.spi.DeviceInfo: void registerProvider(com.sinch.sanalytics.client.spi.Provider)
+com.sinch.sanalytics.client.spi.DeviceInfo: com.sinch.sanalytics.client.DeviceInfo newInstance(java.lang.Object)
+com.sinch.sanalytics.client.spi.DeviceInfo: void <clinit>()
+com.sinch.sanalytics.client.spi.DeviceInfo$1
+com.sinch.sanalytics.client.spi.DeviceInfo$Impl
+com.sinch.sanalytics.client.spi.DeviceInfo$Impl: DeviceInfo$Impl()
+com.sinch.sanalytics.client.spi.DeviceInfo$Impl: DeviceInfo$Impl(com.sinch.sanalytics.client.spi.DeviceInfo$1)
+com.sinch.sanalytics.client.spi.HttpClient
+com.sinch.sanalytics.client.spi.HttpClient: com.sinch.sanalytics.client.spi.HttpClient$Impl sServiceProvider
+com.sinch.sanalytics.client.spi.HttpClient: HttpClient()
+com.sinch.sanalytics.client.spi.HttpClient: void registerProvider(com.sinch.sanalytics.client.spi.Provider)
+com.sinch.sanalytics.client.spi.HttpClient: com.sinch.sanalytics.client.HttpClient newInstance(java.lang.Object)
+com.sinch.sanalytics.client.spi.HttpClient: void <clinit>()
+com.sinch.sanalytics.client.spi.HttpClient$1
+com.sinch.sanalytics.client.spi.HttpClient$Impl
+com.sinch.sanalytics.client.spi.HttpClient$Impl: HttpClient$Impl()
+com.sinch.sanalytics.client.spi.HttpClient$Impl: HttpClient$Impl(com.sinch.sanalytics.client.spi.HttpClient$1)
+com.sinch.sanalytics.client.spi.Provider
+com.sinch.sanalytics.client.spi.Provider: java.lang.Object newInstance(java.lang.Object)
+com.sinch.sanalytics.client.spi.SystemPreferences
+com.sinch.sanalytics.client.spi.SystemPreferences: com.sinch.sanalytics.client.spi.SystemPreferences$Impl sServiceProvider
+com.sinch.sanalytics.client.spi.SystemPreferences: void registerProvider(com.sinch.sanalytics.client.spi.Provider)
+com.sinch.sanalytics.client.spi.SystemPreferences: com.sinch.sanalytics.client.SystemPreferences newInstance(java.lang.Object)
+com.sinch.sanalytics.client.spi.SystemPreferences: SystemPreferences()
+com.sinch.sanalytics.client.spi.SystemPreferences: void <clinit>()
+com.sinch.sanalytics.client.spi.SystemPreferences$1
+com.sinch.sanalytics.client.spi.SystemPreferences$Impl
+com.sinch.sanalytics.client.spi.SystemPreferences$Impl: SystemPreferences$Impl()
+com.sinch.sanalytics.client.spi.SystemPreferences$Impl: SystemPreferences$Impl(com.sinch.sanalytics.client.spi.SystemPreferences$1)
+com.sinch.verification.BuildConfig
+com.sinch.verification.BuildConfig: boolean DEBUG
+com.sinch.verification.BuildConfig: java.lang.String APPLICATION_ID
+com.sinch.verification.BuildConfig: java.lang.String BUILD_TYPE
+com.sinch.verification.BuildConfig: java.lang.String FLAVOR
+com.sinch.verification.BuildConfig: int VERSION_CODE
+com.sinch.verification.BuildConfig: java.lang.String VERSION_NAME
+com.sinch.verification.BuildConfig: BuildConfig()
+com.sinch.verification.CodeInterceptionException
+com.sinch.verification.CodeInterceptionException: CodeInterceptionException(java.lang.String)
+com.sinch.verification.Config
+com.sinch.verification.Config: android.content.Context getContext()
+com.sinch.verification.Config: java.lang.String getApplicationKey()
+com.sinch.verification.Config: java.lang.String getEnvironmentHost()
+com.sinch.verification.ConfigBuilder
+com.sinch.verification.ConfigBuilder: com.sinch.verification.ConfigBuilder context(android.content.Context)
+com.sinch.verification.ConfigBuilder: com.sinch.verification.ConfigBuilder applicationKey(java.lang.String)
+com.sinch.verification.ConfigBuilder: com.sinch.verification.ConfigBuilder environmentHost(java.lang.String)
+com.sinch.verification.ConfigBuilder: com.sinch.verification.Config build()
+com.sinch.verification.IncorrectCodeException
+com.sinch.verification.IncorrectCodeException: java.lang.String DEFAULT_MESSAGE
+com.sinch.verification.IncorrectCodeException: IncorrectCodeException()
+com.sinch.verification.IncorrectCodeException: void <clinit>()
+com.sinch.verification.InitiationResult
+com.sinch.verification.InitiationResult: java.lang.String selectedLanguage()
+com.sinch.verification.InvalidInputException
+com.sinch.verification.InvalidInputException: java.lang.String DEFAULT_MESSAGE
+com.sinch.verification.InvalidInputException: InvalidInputException()
+com.sinch.verification.InvalidInputException: InvalidInputException(java.lang.String)
+com.sinch.verification.InvalidInputException: void <clinit>()
+com.sinch.verification.Logger
+com.sinch.verification.Logger: void println(int,java.lang.String,java.lang.String)
+com.sinch.verification.PhoneNumberFormattingTextWatcher
+com.sinch.verification.PhoneNumberFormattingTextWatcher: android.telephony.PhoneNumberFormattingTextWatcher mDelegate
+com.sinch.verification.PhoneNumberFormattingTextWatcher: PhoneNumberFormattingTextWatcher(java.lang.String)
+com.sinch.verification.PhoneNumberFormattingTextWatcher: void afterTextChanged(android.text.Editable)
+com.sinch.verification.PhoneNumberFormattingTextWatcher: void beforeTextChanged(java.lang.CharSequence,int,int,int)
+com.sinch.verification.PhoneNumberFormattingTextWatcher: void onTextChanged(java.lang.CharSequence,int,int,int)
+com.sinch.verification.PhoneNumberUtils
+com.sinch.verification.PhoneNumberUtils: PhoneNumberUtils()
+com.sinch.verification.PhoneNumberUtils: java.lang.String formatNumberToE164(java.lang.String,java.lang.String)
+com.sinch.verification.PhoneNumberUtils: boolean isPossibleNumber(java.lang.String,java.lang.String)
+com.sinch.verification.PhoneNumberUtils: java.lang.String getDefaultCountryIso(android.content.Context)
+com.sinch.verification.ServiceErrorException
+com.sinch.verification.ServiceErrorException: int mStatusCode
+com.sinch.verification.ServiceErrorException: ServiceErrorException(java.lang.String)
+com.sinch.verification.ServiceErrorException: ServiceErrorException(int,java.lang.String)
+com.sinch.verification.ServiceErrorException: int getStatusCode()
+com.sinch.verification.SimUtils
+com.sinch.verification.SimUtils: java.lang.String TAG
+com.sinch.verification.SimUtils: SimUtils()
+com.sinch.verification.SimUtils: java.util.ArrayList getPhoneNumbers(android.content.Context)
+com.sinch.verification.SinchVerification
+com.sinch.verification.SinchVerification: int VERIFICATION_METHOD_SMS
+com.sinch.verification.SinchVerification: int VERIFICATION_METHOD_FLASHCALL
+com.sinch.verification.SinchVerification: boolean $assertionsDisabled
+com.sinch.verification.SinchVerification: SinchVerification()
+com.sinch.verification.SinchVerification: com.sinch.verification.ConfigBuilder config()
+com.sinch.verification.SinchVerification: com.sinch.verification.Verification createSmsVerification(com.sinch.verification.Config,java.lang.String,com.sinch.verification.VerificationListener)
+com.sinch.verification.SinchVerification: com.sinch.verification.Verification createSmsVerification(com.sinch.verification.Config,java.lang.String,java.lang.String,com.sinch.verification.VerificationListener)
+com.sinch.verification.SinchVerification: com.sinch.verification.Verification createSmsVerification(com.sinch.verification.Config,java.lang.String,java.lang.String,java.util.List,com.sinch.verification.VerificationListener)
+com.sinch.verification.SinchVerification: com.sinch.verification.Verification createFlashCallVerification(com.sinch.verification.Config,java.lang.String,com.sinch.verification.VerificationListener)
+com.sinch.verification.SinchVerification: com.sinch.verification.Verification createFlashCallVerification(com.sinch.verification.Config,java.lang.String,java.lang.String,com.sinch.verification.VerificationListener)
+com.sinch.verification.SinchVerification: java.lang.String getVersion()
+com.sinch.verification.SinchVerification: void setLogger(com.sinch.verification.Logger)
+com.sinch.verification.SinchVerification: com.sinch.verification.Verification createVerification(int,com.sinch.verification.Config,java.lang.String,java.lang.String,java.util.List,com.sinch.verification.VerificationListener)
+com.sinch.verification.SinchVerification: boolean shouldEnableNativeLogging(com.sinch.verification.Config)
+com.sinch.verification.SinchVerification: com.sinch.verification.internal.CallbackHandler getCallbackHandler(com.sinch.verification.Config)
+com.sinch.verification.SinchVerification: void <clinit>()
+com.sinch.verification.Verification
+com.sinch.verification.Verification: void initiate()
+com.sinch.verification.Verification: void verify(java.lang.String)
+com.sinch.verification.VerificationException
+com.sinch.verification.VerificationException: VerificationException(java.lang.String)
+com.sinch.verification.VerificationListener
+com.sinch.verification.VerificationListener: void onInitiated(com.sinch.verification.InitiationResult)
+com.sinch.verification.VerificationListener: void onInitiationFailed(java.lang.Exception)
+com.sinch.verification.VerificationListener: void onVerified()
+com.sinch.verification.VerificationListener: void onVerificationFailed(java.lang.Exception)
+com.sinch.verification.internal.siminfo.OptionalBoolean: com.sinch.verification.internal.siminfo.OptionalBoolean[] values()
+com.sinch.verification.internal.siminfo.OptionalBoolean: com.sinch.verification.internal.siminfo.OptionalBoolean valueOf(java.lang.String)

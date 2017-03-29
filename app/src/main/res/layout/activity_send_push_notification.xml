@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="in.checkthem.myfirebase.SendPushNotification">
+
+    <EditText
+        android:id="@+id/editTextvehicle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Vehicle number"
+        android:layout_above="@+id/editTextTitle"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:id="@+id/editTextTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Message Title"
+        android:layout_above="@+id/editTextMessage"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:id="@+id/editTextMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Message"
+        android:layout_above="@+id/editTextImageUrl"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:id="@+id/editTextImageUrl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Image URL (Optional) "
+        android:layout_marginBottom="12dp"
+        android:layout_above="@+id/buttonSendPush"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:id="@+id/buttonSendPush"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Send Push"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true" />
+    <Button
+        android:id="@+id/getNotifButton"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Show My Notifications"
+        android:layout_below="@+id/buttonSendPush"
+        style="@style/Widget.AppCompat.Button.Borderless"/>
+    <Button
+        android:id="@+id/getLocationPickerButton"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Get Location"
+        android:layout_below="@+id/getNotifButton"
+        style="@style/Widget.AppCompat.Button.Borderless"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/getLocationPickerButton"
+        android:hint="Your Selected  Location Will be Shown Here"
+        android:id="@+id/textView"/>
+
+</RelativeLayout>

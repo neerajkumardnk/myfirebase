@@ -1,0 +1,69 @@
+1.4.0
+    - Improved internal logging.
+    - Improved APIs for sms language selection.
+    - Fixed a problem with adding excess permissions to the application manifest.
+
+1.3.0
+    - Added possibility to specify verification sms content language.
+    - Fixed a rare crash on multisim devices that don't report carrier name
+        properly.
+
+1.2.0
+    -  Fixed an issue where the Sinch SDK would hangup a non-Sinch
+       flash call if the call had been active since before a flash call
+       verification was initiated.
+
+    - Add support for external logger, see new method SinchVerification.setLogger(1).
+
+1.1.8
+    - Internal improvements to metadata robustness
+    - Enhanced logging capability for troubleshooting
+    - Improved multi-sim support
+
+1.1.7
+    - Improved internal request retry logic.
+    - Improved internal logging.
+
+1.1.6
+    - Fixed a possible verification failure when a flash call starts ringing
+        before verification initiation request is completed.
+1.1.5
+    - Fixed a possible crash when querying phone metadata on some devices and
+        API levels before 18.
+1.1.4
+    - Early detection of flashcall attempt with high probability of failure. SDK will invoke
+        failure callback for fallback to other verification method.
+    - Shorter timeout of flashcall verification attempt for quicker fallback to other verification method.
+1.1.3
+    - Flash call verification report improvements for better service
+        monitoring and quality assurance.
+1.1.2
+    - Fixed a rare crash when querying sms or call log database on some
+		devices and API levels before 16.
+1.1.1
+    - Fixed a rare crash when unregistering call or sms listeners on some
+		devices.
+1.1
+    - Introduced PhoneNumberUtils to allow for proper phone number formatting
+      and displaying.
+    - Added a PhoneNumberFormattingTextWatcher class that behaves exactly like
+        the android version, but allows setting a country code different from
+        the default one on APIs before 21.
+1.0.4
+    - Fixed crash on unsupported operator code.
+    - Fixed issues with error callbacks and anonymous calls after flash call verification succeeded.
+1.0.3
+    - Improvements for Flash Call detection.
+1.0.2
+    - Fixed a rare crash when unregistering ConnectivityListener on some
+        devices.
+    - Fixed a rare crash when an empty number string was obtained from
+        BroadcastReceiver on incoming call.
+1.0.1
+    - Fixed a rare occurence where two flashcalls would be received and the second one would ring normally.
+1.0
+    - Flash Call Verification GA
+    - SMS Verification GA
+    - Verification reports available in the Sinch Portal
+0.9.0-BETA
+    - First public release with support for SMS and flash call verification

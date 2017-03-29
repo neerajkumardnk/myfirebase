@@ -1,0 +1,1045 @@
+com.sinch.httpclient.AndroidAsyncTask -> com.sinch.a.a:
+    com.sinch.httpclient.AsyncTaskDelegate mDelegate -> a
+    void <init>(com.sinch.httpclient.AsyncTaskDelegate) -> <init>
+    void onPostExecute(java.lang.Object) -> onPostExecute
+    void onCancelled(java.lang.Object) -> onCancelled
+    java.lang.Object doInBackground(java.lang.Object[]) -> doInBackground
+    boolean access$000(com.sinch.httpclient.AndroidAsyncTask) -> a
+    void <clinit>() -> <clinit>
+com.sinch.httpclient.AndroidAsyncTask$1 -> com.sinch.a.b:
+    com.sinch.httpclient.AndroidAsyncTask this$0 -> a
+    void <init>(com.sinch.httpclient.AndroidAsyncTask) -> <init>
+    boolean isCancelled() -> a
+    boolean isApi17OrLater() -> b
+    boolean isApi18OrLater() -> p
+    boolean isApi22OrLater() -> c
+    org.json.JSONObject arrayToMap(org.json.JSONArray) -> a
+    void addJsonValues(java.util.Map,java.lang.String,org.json.JSONObject) -> a
+    java.util.Map extractMccMnc(java.lang.String) -> a
+    boolean isInteger(java.lang.String) -> b
+    boolean canGetCellSignalLevel(android.content.Context) -> a
+    boolean canGetMSISDN(android.content.Context) -> b
+    boolean hasPermission(java.lang.String,android.content.Context) -> a
+    org.json.JSONObject getDataNetworkInfo$40ef8e0e(android.content.Context,com.sinch.httpclient.AsyncTaskDelegate) -> a
+    java.lang.String getBatteryLevel$692d321c(android.content.Context,com.sinch.httpclient.AsyncTaskDelegate) -> b
+    void putSimCardsInfo(org.json.JSONObject,java.util.List,java.lang.String) -> a
+    java.lang.String getDeviceId(android.content.Context) -> c
+    com.sinch.verification.internal.siminfo.OptionalBoolean isVoiceCapable(android.content.Context) -> d
+    java.lang.String numberInE164Format(java.lang.String,java.lang.String) -> a
+    boolean isPossibleNumber(java.lang.String,java.lang.String) -> b
+    java.lang.Object parsePhoneNumber(java.lang.String,java.lang.String) -> i
+    java.lang.Object getPhoneNumberUtilInstance() -> d
+    org.json.JSONArray getInfo$7c2fced4(android.content.Context,com.sinch.httpclient.AsyncTaskDelegate) -> c
+    java.util.List getSimCardsInfo$45e23ec3(android.content.Context,com.sinch.httpclient.AsyncTaskDelegate) -> d
+com.sinch.httpclient.AsyncTaskDelegate -> com.sinch.a.c:
+    java.lang.Object doInBackground$7a921732(com.sinch.httpclient.AsyncTaskDelegate) -> a
+    void onPostExecute(java.lang.Object) -> a
+    void onCancelled(java.lang.Object) -> b
+    void execute() -> e
+    void cancel$1385ff() -> f
+    boolean isCancelled() -> a
+    void registerListener$6b7fae1b(com.sinch.httpclient.AsyncTaskDelegate) -> b
+    void unregisterListener$6b7fae1b(com.sinch.httpclient.AsyncTaskDelegate) -> c
+    void onReconnected() -> g
+    void onSuccess(com.sinch.httpclient.Response) -> a
+    void onError(java.lang.Exception) -> a
+    boolean shouldRetry() -> h
+    int getBackOffMillis() -> i
+    void handleError$698b7e31() -> j
+    boolean post(java.lang.Runnable) -> a
+    void onCodeIntercepted(java.lang.String,java.lang.String) -> c
+    void onCodeInterceptionError(java.lang.Exception) -> b
+    void onCodeInterceptionCompleted(boolean,boolean,org.json.JSONObject) -> a
+    void start() -> k
+    void onSuccess(org.json.JSONObject,java.lang.String) -> a
+    com.sinch.verification.internal.http.HttpService createHttpService(java.lang.Object) -> c
+    void addCommonExtra(java.lang.String,java.lang.String) -> d
+    void d(java.lang.String,java.lang.String) -> e
+    void w(java.lang.String,java.lang.String) -> f
+    void e(java.lang.String,java.lang.String) -> g
+    void i(java.lang.String,java.lang.String) -> h
+    void log(int,java.lang.String,java.lang.String,java.util.Map) -> a
+    void flush() -> l
+    void finish() -> m
+    java.util.List getSimCardInfos() -> n
+    void cancel() -> o
+com.sinch.httpclient.AsyncTaskRequest -> com.sinch.a.d:
+    com.sinch.httpclient.Request mRequest -> a
+    com.sinch.httpclient.System mSystem -> b
+    com.sinch.httpclient.AsyncTaskDelegate mResponseHandler$24757c42 -> c
+    com.sinch.httpclient.Scheduler mMainThreadScheduler -> d
+    com.sinch.httpclient.AsyncTaskDelegate mTask$11db2e73 -> e
+    java.util.concurrent.atomic.AtomicBoolean mCancelled -> f
+    java.util.concurrent.atomic.AtomicBoolean mStarted -> g
+    void <init>(com.sinch.httpclient.Request,com.sinch.httpclient.AsyncTaskDelegate,com.sinch.httpclient.Scheduler,com.sinch.httpclient.System) -> <init>
+    void start() -> k
+    void cancel() -> o
+    void access$000(com.sinch.httpclient.AsyncTaskRequest) -> a
+com.sinch.httpclient.AsyncTaskRequest$1 -> com.sinch.a.e:
+    com.sinch.httpclient.AsyncTaskRequest this$0 -> a
+    void <init>(com.sinch.httpclient.AsyncTaskRequest) -> <init>
+    void run() -> run
+com.sinch.httpclient.AsyncTaskRequest$TaskImpl -> com.sinch.a.f:
+    com.sinch.httpclient.Request mRequest -> a
+    com.sinch.httpclient.AsyncTaskDelegate mHandler$24757c42 -> b
+    boolean $assertionsDisabled -> c
+    void <init>(com.sinch.httpclient.Request,com.sinch.httpclient.System,com.sinch.httpclient.AsyncTaskDelegate) -> <init>
+    java.lang.Object doInBackground$7a921732(com.sinch.httpclient.AsyncTaskDelegate) -> a
+    void disconnectQuietly(java.net.HttpURLConnection) -> a
+    void onPostExecute(java.lang.Object) -> a
+    void onCancelled(java.lang.Object) -> b
+    void <clinit>() -> <clinit>
+com.sinch.httpclient.FixedBackoffRetryPolicy -> com.sinch.a.g:
+    int[] mBackoffIntervalsMs -> a
+    int mMaxNumRetries -> b
+    int mCurrentRetryCount -> c
+    boolean $assertionsDisabled -> d
+    void <init>(int[],java.util.concurrent.TimeUnit) -> <init>
+    int[] toIntervalMs(int[],java.util.concurrent.TimeUnit) -> a
+    void validateIntervals(int[]) -> a
+    boolean shouldRetry() -> h
+    int getBackOffMillis() -> i
+    void handleError$698b7e31() -> j
+    void <clinit>() -> <clinit>
+com.sinch.httpclient.HttpClient -> com.sinch.a.h:
+    com.sinch.httpclient.Scheduler mScheduler -> a
+    com.sinch.httpclient.System mSystem -> c
+    java.util.concurrent.atomic.AtomicInteger mEntryIdCounter -> d
+    java.util.PriorityQueue mRequestQueue -> e
+    java.util.Map mRequestsInProgress -> f
+    java.util.Set mFailedRequests -> g
+    com.sinch.httpclient.AsyncTaskDelegate mConnectivityMonitor$bce7fa8 -> h
+    java.util.concurrent.atomic.AtomicBoolean mRegisteredConnectivityListener -> i
+    java.util.Comparator sPriorityComparator -> j
+    boolean $assertionsDisabled -> b
+    void <init>(com.sinch.httpclient.AsyncTaskDelegate) -> <init>
+    void <init>() -> <init>
+    void <init>(com.sinch.httpclient.Scheduler,com.sinch.httpclient.System,com.sinch.httpclient.AsyncTaskDelegate) -> <init>
+    long _currentTimeMillis() -> b
+    java.util.List requestsWithFilteredWithComparator(java.util.List,int,int) -> a
+    java.util.List copyOfRequestsInProgress() -> c
+    void dispatchRequestsIfApplicable() -> d
+    void dispatchRequest(com.sinch.httpclient.RequestEntry) -> a
+    void _onCompleted$304b24ed() -> p
+    com.sinch.httpclient.RequestEntry removeFromInProgress(int) -> a
+    boolean isReadyForRetry(com.sinch.httpclient.RequestEntry) -> b
+    void _retryFailedRequest(com.sinch.httpclient.RequestEntry) -> c
+    void onReconnected() -> g
+    void access$000$13791ae5(com.sinch.httpclient.HttpClient,com.sinch.httpclient.Request,com.sinch.httpclient.AsyncTaskDelegate,com.sinch.httpclient.RequestOptions) -> a
+    void access$100(com.sinch.httpclient.HttpClient,com.sinch.httpclient.RequestEntry,com.sinch.httpclient.Response) -> a
+    com.sinch.httpclient.Scheduler access$200(com.sinch.httpclient.HttpClient) -> a
+    void access$300(com.sinch.httpclient.HttpClient,com.sinch.httpclient.RequestEntry,java.lang.Exception) -> a
+    void access$400(com.sinch.httpclient.HttpClient,com.sinch.httpclient.RequestEntry) -> a
+    void access$500(com.sinch.httpclient.HttpClient) -> b
+    void <clinit>() -> <clinit>
+com.sinch.httpclient.HttpClient$1 -> com.sinch.a.i:
+    void <init>() -> <init>
+    int compare(java.lang.Object,java.lang.Object) -> compare
+com.sinch.httpclient.HttpClient$2 -> com.sinch.a.j:
+    com.sinch.httpclient.Request val$request -> a
+    com.sinch.httpclient.AsyncTaskDelegate val$handler$24757c42 -> b
+    com.sinch.httpclient.RequestOptions val$options -> c
+    com.sinch.httpclient.HttpClient this$0 -> d
+    void <init>(com.sinch.httpclient.HttpClient,com.sinch.httpclient.Request,com.sinch.httpclient.AsyncTaskDelegate,com.sinch.httpclient.RequestOptions) -> <init>
+    void run() -> run
+com.sinch.httpclient.HttpClient$3 -> com.sinch.a.k:
+    com.sinch.httpclient.RequestEntry val$entry -> a
+    com.sinch.httpclient.HttpClient this$0 -> b
+    void <init>(com.sinch.httpclient.HttpClient,com.sinch.httpclient.RequestEntry) -> <init>
+    void onSuccess(com.sinch.httpclient.Response) -> a
+    void onError(java.lang.Exception) -> a
+    java.lang.Object invokeMethod(java.lang.reflect.Method,java.lang.Object,java.lang.Object[]) -> a
+    java.lang.reflect.Method getMethod(java.lang.Class,java.lang.String,java.lang.Class[]) -> a
+    java.lang.reflect.Method getDeclaredMethod(java.lang.Class,java.lang.String,java.lang.Class[]) -> b
+    java.lang.Class getClass(java.lang.String) -> a
+    java.lang.reflect.Field getField(java.lang.Class,java.lang.String) -> a
+com.sinch.httpclient.HttpClient$3$1 -> com.sinch.a.l:
+    com.sinch.httpclient.Response val$response -> a
+    com.sinch.httpclient.HttpClient$3 this$1 -> b
+    void <init>(com.sinch.httpclient.HttpClient$3,com.sinch.httpclient.Response) -> <init>
+    void run() -> run
+com.sinch.httpclient.HttpClient$3$2 -> com.sinch.a.m:
+    java.lang.Exception val$exception -> a
+    com.sinch.httpclient.HttpClient$3 this$1 -> b
+    void <init>(com.sinch.httpclient.HttpClient$3,java.lang.Exception) -> <init>
+    void run() -> run
+com.sinch.httpclient.HttpClient$4 -> com.sinch.a.n:
+    com.sinch.httpclient.RequestEntry val$entry -> a
+    com.sinch.httpclient.HttpClient this$0 -> b
+    void <init>(com.sinch.httpclient.HttpClient,com.sinch.httpclient.RequestEntry) -> <init>
+    void run() -> run
+com.sinch.httpclient.HttpClient$5 -> com.sinch.a.o:
+    com.sinch.httpclient.HttpClient this$0 -> a
+    void <init>(com.sinch.httpclient.HttpClient) -> <init>
+    void run() -> run
+com.sinch.httpclient.HttpRequestProcessor -> com.sinch.a.p:
+    com.sinch.httpclient.Request mRequest -> a
+    java.net.HttpURLConnection mConnection -> b
+    java.util.concurrent.atomic.AtomicBoolean mRun -> c
+    byte[] EMPTY_BYTE_ARRAY -> d
+    boolean $assertionsDisabled -> e
+    void <init>(com.sinch.httpclient.Request,java.net.HttpURLConnection) -> <init>
+    com.sinch.httpclient.Response run() -> a
+    java.util.Map flattenHeaders(java.util.Map) -> a
+    boolean shouldDoOutput(com.sinch.httpclient.Request) -> a
+    void setConnectionProperties() -> b
+    byte[] readResponseBody(java.io.InputStream) -> a
+    void closeQuietly(java.io.Closeable) -> a
+    void closeStreamsQuietly(java.net.HttpURLConnection) -> a
+    void <clinit>() -> <clinit>
+com.sinch.httpclient.Logger -> com.sinch.a.q:
+    com.sinch.httpclient.AsyncTaskDelegate mLogger$6d006eaf -> a
+    void d(java.lang.String,java.lang.String) -> a
+    void <init>(com.sinch.httpclient.AsyncTaskDelegate) -> <init>
+com.sinch.httpclient.Request -> com.sinch.a.r:
+    java.lang.String id -> a
+    java.net.URL url -> b
+    java.lang.String method -> c
+    java.util.Map headers -> d
+    byte[] body -> e
+    boolean $assertionsDisabled -> f
+    void <init>(java.lang.String,java.net.URL,java.lang.String,java.util.Map,byte[]) -> <init>
+    java.lang.String asString(boolean) -> a
+    java.lang.String bodyStringRepresentation(byte[]) -> a
+    java.lang.String toString() -> toString
+    void <clinit>() -> <clinit>
+com.sinch.httpclient.RequestEntry -> com.sinch.a.s:
+    int id -> a
+    com.sinch.httpclient.RequestOptions options -> b
+    com.sinch.httpclient.Request request -> c
+    com.sinch.httpclient.AsyncTaskDelegate mHandler$24757c42 -> d
+    com.sinch.httpclient.AsyncTaskDelegate retryPolicy$4829c431 -> e
+    long retryAt -> f
+    com.sinch.httpclient.Logger logger -> g
+    com.sinch.httpclient.AsyncTaskDelegate mTask$410eed5f -> h
+    boolean $assertionsDisabled -> i
+    void <init>(int,com.sinch.httpclient.Request,com.sinch.httpclient.AsyncTaskDelegate,com.sinch.httpclient.RequestOptions) -> <init>
+    java.lang.String loggingIdentifier() -> a
+    void setTask$320fcf14(com.sinch.httpclient.AsyncTaskDelegate) -> a
+    java.lang.String toString() -> toString
+    void <clinit>() -> <clinit>
+com.sinch.httpclient.RequestOptions -> com.sinch.a.t:
+    int priority -> a
+    com.sinch.httpclient.AsyncTaskDelegate retry$4829c431 -> b
+    com.sinch.httpclient.Logger logger -> c
+    void <init>(int,com.sinch.httpclient.AsyncTaskDelegate,com.sinch.httpclient.Logger) -> <init>
+com.sinch.httpclient.Response -> com.sinch.a.u:
+    int status -> a
+    java.util.Map headers -> b
+    byte[] body -> c
+    boolean $assertionsDisabled -> d
+    void <init>(int,java.util.Map,byte[]) -> <init>
+    void <init>(int,java.util.Map) -> <init>
+    void <clinit>() -> <clinit>
+com.sinch.httpclient.Scheduler -> com.sinch.a.v:
+    android.os.Handler mHandler -> a
+    void post(java.lang.Runnable) -> a
+    void <init>(android.os.Looper) -> <init>
+com.sinch.httpclient.System -> com.sinch.a.w:
+    void <init>() -> <init>
+    com.sinch.httpclient.Scheduler createScheduler() -> a
+com.sinch.httpclient.System$1 -> com.sinch.a.x:
+    com.sinch.httpclient.AndroidAsyncTask val$impl -> a
+    void <init>(com.sinch.httpclient.AndroidAsyncTask) -> <init>
+    void execute() -> e
+    void cancel$1385ff() -> f
+com.sinch.sanalytics.client.Client -> com.sinch.sanalytics.client.Client:
+    com.sinch.sanalytics.client.Logger logger() -> logger
+    void flush() -> flush
+com.sinch.sanalytics.client.ClientBuilder -> com.sinch.sanalytics.client.ClientBuilder:
+    com.sinch.sanalytics.client.ClientBuilder databaseDirectory(java.lang.String) -> databaseDirectory
+    com.sinch.sanalytics.client.ClientBuilder appId(java.lang.String) -> appId
+    com.sinch.sanalytics.client.ClientBuilder appVersion(java.lang.String) -> appVersion
+    com.sinch.sanalytics.client.ClientBuilder logSessionId(java.lang.String) -> logSessionId
+    com.sinch.sanalytics.client.ClientBuilder deviceId(java.lang.String) -> deviceId
+    com.sinch.sanalytics.client.ClientBuilder baseUrl(java.net.URL) -> baseUrl
+    com.sinch.sanalytics.client.ClientBuilder flushInterval(long,java.util.concurrent.TimeUnit) -> flushInterval
+    com.sinch.sanalytics.client.Client build() -> build
+com.sinch.sanalytics.client.DefaultClientBuilder -> com.sinch.sanalytics.client.DefaultClientBuilder:
+    java.lang.String mDbDir -> mDbDir
+    java.lang.String mAppId -> mAppId
+    java.lang.String mAppVersion -> mAppVersion
+    java.lang.String mLogSessionId -> mLogSessionId
+    java.lang.String mDeviceId -> mDeviceId
+    java.net.URL mBaseURL -> mBaseURL
+    long mFlushIntervalMs -> mFlushIntervalMs
+    boolean $assertionsDisabled -> $assertionsDisabled
+    void <init>() -> <init>
+    com.sinch.sanalytics.client.DefaultClientBuilder builder() -> builder
+    com.sinch.sanalytics.client.Client build() -> build
+    com.sinch.sanalytics.client.ClientBuilder databaseDirectory(java.lang.String) -> databaseDirectory
+    com.sinch.sanalytics.client.ClientBuilder appId(java.lang.String) -> appId
+    com.sinch.sanalytics.client.ClientBuilder appVersion(java.lang.String) -> appVersion
+    com.sinch.sanalytics.client.ClientBuilder logSessionId(java.lang.String) -> logSessionId
+    com.sinch.sanalytics.client.ClientBuilder deviceId(java.lang.String) -> deviceId
+    com.sinch.sanalytics.client.ClientBuilder baseUrl(java.net.URL) -> baseUrl
+    com.sinch.sanalytics.client.ClientBuilder flushInterval(long,java.util.concurrent.TimeUnit) -> flushInterval
+    void checkStringParam(java.lang.String,java.lang.String) -> checkStringParam
+    void <clinit>() -> <clinit>
+com.sinch.sanalytics.client.DeviceInfo -> com.sinch.sanalytics.client.DeviceInfo:
+    java.lang.String platformVersion() -> platformVersion
+    java.lang.String locale() -> locale
+    java.util.List MCCs() -> MCCs
+com.sinch.sanalytics.client.HttpClient -> com.sinch.sanalytics.client.HttpClient:
+    void sendHttpRequest(java.lang.String,java.lang.String,java.util.Map,byte[],com.sinch.sanalytics.client.HttpRequestCallback) -> sendHttpRequest
+com.sinch.sanalytics.client.HttpRequestCallback -> com.sinch.sanalytics.client.HttpRequestCallback:
+    void complete(int,java.util.Map,byte[]) -> complete
+    void completeExceptionally(java.lang.Exception) -> completeExceptionally
+com.sinch.sanalytics.client.LocalLogging -> com.sinch.sanalytics.client.LocalLogging:
+    void setMinimumSeverity(com.sinch.sanalytics.client.LogSeverity) -> setMinimumSeverity
+    void _setMinimumSeverity(byte) -> _setMinimumSeverity
+    void <init>() -> <init>
+com.sinch.sanalytics.client.LogSeverity -> com.sinch.sanalytics.client.LogSeverity:
+    com.sinch.sanalytics.client.LogSeverity ALERT -> ALERT
+    com.sinch.sanalytics.client.LogSeverity CRITICAL -> CRITICAL
+    com.sinch.sanalytics.client.LogSeverity ERROR -> ERROR
+    com.sinch.sanalytics.client.LogSeverity WARNING -> WARNING
+    com.sinch.sanalytics.client.LogSeverity NOTICE -> NOTICE
+    com.sinch.sanalytics.client.LogSeverity INFO -> INFO
+    com.sinch.sanalytics.client.LogSeverity DEBUG -> DEBUG
+    byte mValue -> mValue
+    com.sinch.sanalytics.client.LogSeverity[] $VALUES -> $VALUES
+    boolean $assertionsDisabled -> $assertionsDisabled
+    com.sinch.sanalytics.client.LogSeverity[] values() -> values
+    com.sinch.sanalytics.client.LogSeverity valueOf(java.lang.String) -> valueOf
+    void <init>(java.lang.String,int,int) -> <init>
+    com.sinch.sanalytics.client.LogSeverity fromValue(int) -> fromValue
+    byte value() -> value
+    boolean isValid(int) -> isValid
+    void <clinit>() -> <clinit>
+com.sinch.sanalytics.client.Logger -> com.sinch.sanalytics.client.Logger:
+    void log(com.sinch.sanalytics.client.LogSeverity,java.lang.String) -> log
+    void log(com.sinch.sanalytics.client.LogSeverity,java.util.Map) -> log
+    void log(com.sinch.sanalytics.client.LogSeverity,java.lang.String,java.util.Map) -> log
+com.sinch.sanalytics.client.NativeLibJARLoader -> com.sinch.sanalytics.client.NativeLibJARLoader:
+    void <init>() -> <init>
+    void loadLibraryFromJar(java.lang.String) -> loadLibraryFromJar
+    void loadLibraryFromStream(java.io.InputStream) -> loadLibraryFromStream
+    java.lang.String[] getCandidateLibraryPaths(java.lang.String) -> getCandidateLibraryPaths
+    java.io.InputStream tryGetResourceAtPaths(java.lang.String[]) -> tryGetResourceAtPaths
+    java.lang.String getFileExtension(java.lang.String) -> getFileExtension
+    void copy(java.io.InputStream,java.io.OutputStream) -> copy
+    java.lang.String toCommaSeparatedString(java.lang.String[]) -> toCommaSeparatedString
+com.sinch.sanalytics.client.NativeLibLoader -> com.sinch.sanalytics.client.NativeLibLoader:
+    void <init>() -> <init>
+    void loadLibrary(java.lang.String) -> loadLibrary
+    void loadLibraryFromStream(java.io.InputStream) -> loadLibraryFromStream
+com.sinch.sanalytics.client.NativeLibraryException -> com.sinch.sanalytics.client.NativeLibraryException:
+    void <init>(java.lang.String,java.lang.Throwable) -> <init>
+com.sinch.sanalytics.client.SystemPreferences -> com.sinch.sanalytics.client.SystemPreferences:
+    boolean contains(java.lang.String) -> contains
+    java.lang.String getString(java.lang.String) -> getString
+    void putString(java.lang.String,java.lang.String) -> putString
+    void clear() -> clear
+com.sinch.sanalytics.client.android.AndroidClientBuilder -> com.sinch.sanalytics.client.android.AndroidClientBuilder:
+    void <init>() -> <init>
+    com.sinch.sanalytics.client.ClientBuilder builder(android.content.Context) -> builder
+    com.sinch.sanalytics.client.Client buildNoOpClient() -> buildNoOpClient
+com.sinch.sanalytics.client.android.DefaultGlobalNativeLibLoader -> com.sinch.sanalytics.client.android.DefaultGlobalNativeLibLoader:
+    java.lang.String LIBRARY_NAME -> LIBRARY_NAME
+    java.util.concurrent.locks.Lock sNativeLibraryLoadLock -> sNativeLibraryLoadLock
+    boolean sNativeLibraryIsLoaded -> sNativeLibraryIsLoaded
+    void <init>() -> <init>
+    boolean isNativeLibraryIsLoaded() -> isNativeLibraryIsLoaded
+    void loadNativeLibrary(java.io.InputStream) -> loadNativeLibrary
+    void loadNativeLibraryFromDefaultLocation() -> loadNativeLibraryFromDefaultLocation
+    void <clinit>() -> <clinit>
+com.sinch.sanalytics.client.android.DefaultSystemPreferences -> com.sinch.sanalytics.client.android.DefaultSystemPreferences:
+    android.content.SharedPreferences mPreferences -> mPreferences
+    void <init>(android.content.Context) -> <init>
+    boolean contains(java.lang.String) -> contains
+    java.lang.String getString(java.lang.String) -> getString
+    void putString(java.lang.String,java.lang.String) -> putString
+    void clear() -> clear
+com.sinch.sanalytics.client.android.DefaultSystemPreferencesProvider -> com.sinch.sanalytics.client.android.DefaultSystemPreferencesProvider:
+    void <init>() -> <init>
+    com.sinch.sanalytics.client.SystemPreferences newInstance(java.lang.Object) -> newInstance
+    java.lang.Object newInstance(java.lang.Object) -> newInstance
+com.sinch.sanalytics.client.android.InternalLog -> com.sinch.sanalytics.client.android.InternalLog:
+    java.lang.String TAG -> TAG
+    void <init>() -> <init>
+    void d(java.lang.String) -> d
+    void w(java.lang.String,java.lang.Throwable) -> w
+    void w(java.lang.String) -> w
+com.sinch.sanalytics.client.android.LocalLogging -> com.sinch.sanalytics.client.android.LocalLogging:
+    void setMinimumSeverity(com.sinch.sanalytics.client.LogSeverity) -> setMinimumSeverity
+    void <init>() -> <init>
+com.sinch.sanalytics.client.android.NoOpClient -> com.sinch.sanalytics.client.android.NoOpClient:
+    void <init>() -> <init>
+    com.sinch.sanalytics.client.Logger logger() -> logger
+    void flush() -> flush
+    void log(com.sinch.sanalytics.client.LogSeverity,java.lang.String) -> log
+    void log(com.sinch.sanalytics.client.LogSeverity,java.util.Map) -> log
+    void log(com.sinch.sanalytics.client.LogSeverity,java.lang.String,java.util.Map) -> log
+com.sinch.sanalytics.client.android.NoOpClientBuilder -> com.sinch.sanalytics.client.android.NoOpClientBuilder:
+    void <init>() -> <init>
+    com.sinch.sanalytics.client.ClientBuilder databaseDirectory(java.lang.String) -> databaseDirectory
+    com.sinch.sanalytics.client.ClientBuilder appId(java.lang.String) -> appId
+    com.sinch.sanalytics.client.ClientBuilder appVersion(java.lang.String) -> appVersion
+    com.sinch.sanalytics.client.ClientBuilder logSessionId(java.lang.String) -> logSessionId
+    com.sinch.sanalytics.client.ClientBuilder deviceId(java.lang.String) -> deviceId
+    com.sinch.sanalytics.client.ClientBuilder baseUrl(java.net.URL) -> baseUrl
+    com.sinch.sanalytics.client.ClientBuilder flushInterval(long,java.util.concurrent.TimeUnit) -> flushInterval
+    com.sinch.sanalytics.client.Client build() -> build
+com.sinch.sanalytics.client.jni.ApplicationContext -> com.sinch.sanalytics.client.jni.ApplicationContext:
+    void <init>() -> <init>
+    void initApplicationContext(java.lang.Object) -> initApplicationContext
+com.sinch.sanalytics.client.jni.ClassLoaderDummy -> com.sinch.sanalytics.client.jni.ClassLoaderDummy:
+    void <init>() -> <init>
+com.sinch.sanalytics.client.jni.DefaultClient -> com.sinch.sanalytics.client.jni.DefaultClient:
+    com.sinch.sanalytics.client.jni.NativeObjectRef mNativeObject -> mNativeObject
+    boolean $assertionsDisabled -> $assertionsDisabled
+    void <init>(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.net.URL,long) -> <init>
+    void finalize() -> finalize
+    com.sinch.sanalytics.client.Logger logger() -> logger
+    void flush() -> flush
+    void log(com.sinch.sanalytics.client.LogSeverity,java.lang.String) -> log
+    void log(com.sinch.sanalytics.client.LogSeverity,java.util.Map) -> log
+    void log(com.sinch.sanalytics.client.LogSeverity,java.lang.String,java.util.Map) -> log
+    com.sinch.sanalytics.client.jni.NativeObjectRef getNativeRef() -> getNativeRef
+    boolean createNativeObject(java.util.Map) -> createNativeObject
+    void destroyNativeObject() -> destroyNativeObject
+    void _logString(byte,java.lang.String) -> _logString
+    void _logMap(byte,java.util.Map) -> _logMap
+    void _logStringAndMap(byte,java.lang.String,java.util.Map) -> _logStringAndMap
+    void <clinit>() -> <clinit>
+com.sinch.sanalytics.client.jni.DefaultNativeObjectRef -> com.sinch.sanalytics.client.jni.DefaultNativeObjectRef:
+    long mNativeAddress -> mNativeAddress
+    java.util.concurrent.locks.Lock mNativeObjectLock -> mNativeObjectLock
+    void <init>() -> <init>
+    void lock() -> lock
+    void unlock() -> unlock
+    void setNativeObject(long) -> setNativeObject
+    long getNativeObject() -> getNativeObject
+com.sinch.sanalytics.client.jni.HttpRequestCallback -> com.sinch.sanalytics.client.jni.HttpRequestCallback:
+    com.sinch.sanalytics.client.jni.NativeObjectRef mNativeObject -> mNativeObject
+    void <init>() -> <init>
+    void complete(int,java.util.Map,byte[]) -> complete
+    void completeExceptionally(java.lang.Exception) -> completeExceptionally
+    com.sinch.sanalytics.client.jni.NativeObjectRef getNativeRef() -> getNativeRef
+com.sinch.sanalytics.client.jni.NativeObjectHolder -> com.sinch.sanalytics.client.jni.NativeObjectHolder:
+    com.sinch.sanalytics.client.jni.NativeObjectRef getNativeRef() -> getNativeRef
+com.sinch.sanalytics.client.jni.NativeObjectRef -> com.sinch.sanalytics.client.jni.NativeObjectRef:
+    void lock() -> lock
+    void unlock() -> unlock
+    void setNativeObject(long) -> setNativeObject
+    long getNativeObject() -> getNativeObject
+com.sinch.sanalytics.client.spi.AbstractServiceProvider -> com.sinch.sanalytics.client.spi.AbstractServiceProvider:
+    java.util.concurrent.locks.Lock mLock -> mLock
+    com.sinch.sanalytics.client.spi.Provider mProvider -> mProvider
+    void <init>() -> <init>
+    void registerProvider(com.sinch.sanalytics.client.spi.Provider) -> registerProvider
+    java.lang.Object newInstance(java.lang.Object) -> newInstance
+com.sinch.sanalytics.client.spi.DeviceInfo -> com.sinch.sanalytics.client.spi.DeviceInfo:
+    com.sinch.sanalytics.client.spi.DeviceInfo$Impl sServiceProvider -> sServiceProvider
+    void <init>() -> <init>
+    void registerProvider(com.sinch.sanalytics.client.spi.Provider) -> registerProvider
+    com.sinch.sanalytics.client.DeviceInfo newInstance(java.lang.Object) -> newInstance
+    void <clinit>() -> <clinit>
+com.sinch.sanalytics.client.spi.DeviceInfo$1 -> com.sinch.sanalytics.client.spi.DeviceInfo$1:
+com.sinch.sanalytics.client.spi.DeviceInfo$Impl -> com.sinch.sanalytics.client.spi.DeviceInfo$Impl:
+    void <init>() -> <init>
+    void <init>(com.sinch.sanalytics.client.spi.DeviceInfo$1) -> <init>
+com.sinch.sanalytics.client.spi.HttpClient -> com.sinch.sanalytics.client.spi.HttpClient:
+    com.sinch.sanalytics.client.spi.HttpClient$Impl sServiceProvider -> sServiceProvider
+    void <init>() -> <init>
+    void registerProvider(com.sinch.sanalytics.client.spi.Provider) -> registerProvider
+    com.sinch.sanalytics.client.HttpClient newInstance(java.lang.Object) -> newInstance
+    void <clinit>() -> <clinit>
+com.sinch.sanalytics.client.spi.HttpClient$1 -> com.sinch.sanalytics.client.spi.HttpClient$1:
+com.sinch.sanalytics.client.spi.HttpClient$Impl -> com.sinch.sanalytics.client.spi.HttpClient$Impl:
+    void <init>() -> <init>
+    void <init>(com.sinch.sanalytics.client.spi.HttpClient$1) -> <init>
+com.sinch.sanalytics.client.spi.Provider -> com.sinch.sanalytics.client.spi.Provider:
+    java.lang.Object newInstance(java.lang.Object) -> newInstance
+com.sinch.sanalytics.client.spi.SystemPreferences -> com.sinch.sanalytics.client.spi.SystemPreferences:
+    com.sinch.sanalytics.client.spi.SystemPreferences$Impl sServiceProvider -> sServiceProvider
+    void registerProvider(com.sinch.sanalytics.client.spi.Provider) -> registerProvider
+    com.sinch.sanalytics.client.SystemPreferences newInstance(java.lang.Object) -> newInstance
+    void <init>() -> <init>
+    void <clinit>() -> <clinit>
+com.sinch.sanalytics.client.spi.SystemPreferences$1 -> com.sinch.sanalytics.client.spi.SystemPreferences$1:
+com.sinch.sanalytics.client.spi.SystemPreferences$Impl -> com.sinch.sanalytics.client.spi.SystemPreferences$Impl:
+    void <init>() -> <init>
+    void <init>(com.sinch.sanalytics.client.spi.SystemPreferences$1) -> <init>
+com.sinch.verification.BuildConfig -> com.sinch.verification.BuildConfig:
+    boolean DEBUG -> DEBUG
+    java.lang.String APPLICATION_ID -> APPLICATION_ID
+    java.lang.String BUILD_TYPE -> BUILD_TYPE
+    java.lang.String FLAVOR -> FLAVOR
+    int VERSION_CODE -> VERSION_CODE
+    java.lang.String VERSION_NAME -> VERSION_NAME
+    void <init>() -> <init>
+com.sinch.verification.CodeInterceptionException -> com.sinch.verification.CodeInterceptionException:
+    void <init>(java.lang.String) -> <init>
+com.sinch.verification.Config -> com.sinch.verification.Config:
+    android.content.Context getContext() -> getContext
+    java.lang.String getApplicationKey() -> getApplicationKey
+    java.lang.String getEnvironmentHost() -> getEnvironmentHost
+com.sinch.verification.ConfigBuilder -> com.sinch.verification.ConfigBuilder:
+    com.sinch.verification.ConfigBuilder context(android.content.Context) -> context
+    com.sinch.verification.ConfigBuilder applicationKey(java.lang.String) -> applicationKey
+    com.sinch.verification.ConfigBuilder environmentHost(java.lang.String) -> environmentHost
+    com.sinch.verification.Config build() -> build
+com.sinch.verification.IncorrectCodeException -> com.sinch.verification.IncorrectCodeException:
+    java.lang.String DEFAULT_MESSAGE -> DEFAULT_MESSAGE
+    void <init>() -> <init>
+    void <clinit>() -> <clinit>
+com.sinch.verification.InitiationResult -> com.sinch.verification.InitiationResult:
+    java.lang.String selectedLanguage() -> selectedLanguage
+com.sinch.verification.InvalidInputException -> com.sinch.verification.InvalidInputException:
+    java.lang.String DEFAULT_MESSAGE -> DEFAULT_MESSAGE
+    void <init>() -> <init>
+    void <init>(java.lang.String) -> <init>
+    void <clinit>() -> <clinit>
+com.sinch.verification.Logger -> com.sinch.verification.Logger:
+    void println(int,java.lang.String,java.lang.String) -> println
+com.sinch.verification.PhoneNumberFormattingTextWatcher -> com.sinch.verification.PhoneNumberFormattingTextWatcher:
+    android.telephony.PhoneNumberFormattingTextWatcher mDelegate -> mDelegate
+    void <init>(java.lang.String) -> <init>
+    void afterTextChanged(android.text.Editable) -> afterTextChanged
+    void beforeTextChanged(java.lang.CharSequence,int,int,int) -> beforeTextChanged
+    void onTextChanged(java.lang.CharSequence,int,int,int) -> onTextChanged
+com.sinch.verification.PhoneNumberUtils -> com.sinch.verification.PhoneNumberUtils:
+    void <init>() -> <init>
+    java.lang.String formatNumberToE164(java.lang.String,java.lang.String) -> formatNumberToE164
+    boolean isPossibleNumber(java.lang.String,java.lang.String) -> isPossibleNumber
+    java.lang.String getDefaultCountryIso(android.content.Context) -> getDefaultCountryIso
+com.sinch.verification.ServiceErrorException -> com.sinch.verification.ServiceErrorException:
+    int mStatusCode -> mStatusCode
+    void <init>(java.lang.String) -> <init>
+    void <init>(int,java.lang.String) -> <init>
+    int getStatusCode() -> getStatusCode
+com.sinch.verification.SimUtils -> com.sinch.verification.SimUtils:
+    java.lang.String TAG -> TAG
+    void <init>() -> <init>
+    java.util.ArrayList getPhoneNumbers(android.content.Context) -> getPhoneNumbers
+com.sinch.verification.SinchVerification -> com.sinch.verification.SinchVerification:
+    int VERIFICATION_METHOD_SMS -> VERIFICATION_METHOD_SMS
+    int VERIFICATION_METHOD_FLASHCALL -> VERIFICATION_METHOD_FLASHCALL
+    boolean $assertionsDisabled -> $assertionsDisabled
+    void <init>() -> <init>
+    com.sinch.verification.ConfigBuilder config() -> config
+    com.sinch.verification.Verification createSmsVerification(com.sinch.verification.Config,java.lang.String,com.sinch.verification.VerificationListener) -> createSmsVerification
+    com.sinch.verification.Verification createSmsVerification(com.sinch.verification.Config,java.lang.String,java.lang.String,com.sinch.verification.VerificationListener) -> createSmsVerification
+    com.sinch.verification.Verification createSmsVerification(com.sinch.verification.Config,java.lang.String,java.lang.String,java.util.List,com.sinch.verification.VerificationListener) -> createSmsVerification
+    com.sinch.verification.Verification createFlashCallVerification(com.sinch.verification.Config,java.lang.String,com.sinch.verification.VerificationListener) -> createFlashCallVerification
+    com.sinch.verification.Verification createFlashCallVerification(com.sinch.verification.Config,java.lang.String,java.lang.String,com.sinch.verification.VerificationListener) -> createFlashCallVerification
+    java.lang.String getVersion() -> getVersion
+    void setLogger(com.sinch.verification.Logger) -> setLogger
+    com.sinch.verification.Verification createVerification(int,com.sinch.verification.Config,java.lang.String,java.lang.String,java.util.List,com.sinch.verification.VerificationListener) -> createVerification
+    boolean shouldEnableNativeLogging(com.sinch.verification.Config) -> shouldEnableNativeLogging
+    com.sinch.httpclient.AsyncTaskDelegate getCallbackHandler$1a17e3e0(com.sinch.verification.Config) -> getCallbackHandler$1a17e3e0
+    void <clinit>() -> <clinit>
+com.sinch.verification.Verification -> com.sinch.verification.Verification:
+    void initiate() -> initiate
+    void verify(java.lang.String) -> verify
+com.sinch.verification.VerificationException -> com.sinch.verification.VerificationException:
+    void <init>(java.lang.String) -> <init>
+com.sinch.verification.VerificationListener -> com.sinch.verification.VerificationListener:
+    void onInitiated(com.sinch.verification.InitiationResult) -> onInitiated
+    void onInitiationFailed(java.lang.Exception) -> onInitiationFailed
+    void onVerified() -> onVerified
+    void onVerificationFailed(java.lang.Exception) -> onVerificationFailed
+com.sinch.verification.internal.AndroidCallbackHandler -> com.sinch.verification.a.a:
+    android.os.Handler mHandler -> a
+    void <init>() -> <init>
+    boolean post(java.lang.Runnable) -> a
+com.sinch.verification.internal.DefaultConfig -> com.sinch.verification.a.b:
+    android.content.Context mContext -> a
+    java.lang.String mApplicationKey -> b
+    java.lang.String mEnvironmentHost -> c
+    java.util.Map mInternalParams -> d
+    void <init>() -> <init>
+    void <init>(android.content.Context,java.lang.String,java.lang.String) -> <init>
+    android.content.Context getContext() -> getContext
+    java.lang.String getApplicationKey() -> getApplicationKey
+    java.lang.String getEnvironmentHost() -> getEnvironmentHost
+    java.lang.Object getInternalParameter(java.lang.String) -> a
+    com.sinch.verification.ConfigBuilder context(android.content.Context) -> context
+    com.sinch.verification.ConfigBuilder applicationKey(java.lang.String) -> applicationKey
+    com.sinch.verification.ConfigBuilder environmentHost(java.lang.String) -> environmentHost
+    com.sinch.verification.Config build() -> build
+com.sinch.verification.internal.DefaultInitiationResult -> com.sinch.verification.a.c:
+    java.lang.String mLanguage -> a
+    void <init>() -> <init>
+    void <init>(java.lang.String) -> <init>
+    java.lang.String selectedLanguage() -> selectedLanguage
+com.sinch.verification.internal.InternalVerification -> com.sinch.verification.a.d:
+com.sinch.verification.internal.ReflectionUtils$VerificationReflectionException -> com.sinch.verification.a.e:
+    void <init>(java.lang.Throwable) -> <init>
+com.sinch.verification.internal.ReportMetadata -> com.sinch.verification.a.f:
+    org.json.JSONArray mLateCodes -> a
+    com.sinch.httpclient.AsyncTaskDelegate mLogger$6d006eaf -> b
+    void <init>(com.sinch.httpclient.AsyncTaskDelegate) -> <init>
+    org.json.JSONObject getJson() -> a
+com.sinch.verification.internal.VerificationMethod -> com.sinch.verification.a.g:
+    android.content.Context mContext -> a
+    com.sinch.verification.VerificationListener mListener -> b
+    com.sinch.verification.internal.apiservice.ApiService mApiService -> g
+    java.lang.String mNumber -> c
+    java.lang.String mCustom -> d
+    com.sinch.httpclient.AsyncTaskDelegate mCallbackHandler$7a6b4f00 -> h
+    com.sinch.httpclient.AsyncTaskDelegate mLogger$6d006eaf -> e
+    java.util.List mLanguages -> i
+    android.os.Handler mLoggerFinalizerHandler -> j
+    boolean mVerified -> k
+    long mVerificationStartTime -> f
+    boolean $assertionsDisabled -> l
+    void <init>(com.sinch.verification.internal.VerificationMethodConfig) -> <init>
+    void beforeInitiate() -> b
+    void initiate() -> initiate
+    void verify(java.lang.String) -> verify
+    void verify(java.lang.String,java.lang.String) -> a
+    void finalizeLogger() -> d
+    boolean shouldSilenceCallback(java.lang.String) -> a
+    void onVerificationInit(org.json.JSONObject,java.lang.String) -> b
+    org.json.JSONObject createInitParameters() -> c
+    org.json.JSONObject createVerifyParameters(java.lang.String,java.lang.String) -> b
+    org.json.JSONObject createReportParameters(boolean,boolean,org.json.JSONObject) -> b
+    void onCodeIntercepted(java.lang.String,java.lang.String) -> c
+    void onCodeInterceptionError(java.lang.Exception) -> b
+    void onCodeInterceptionCompleted(boolean,boolean,org.json.JSONObject) -> a
+    void onVerificationResult(org.json.JSONObject) -> a
+    void callbackInitiationFailed(java.lang.Exception) -> c
+    void callbackVerificationFailed(java.lang.Exception) -> d
+    void callbackVerified() -> p
+    void callbackInitiated(com.sinch.verification.InitiationResult) -> a
+    void runOnCallbackHandler(java.lang.Runnable) -> b
+    boolean access$000(com.sinch.verification.internal.VerificationMethod,java.lang.String) -> a
+    void access$100(com.sinch.verification.internal.VerificationMethod) -> a
+    void <clinit>() -> <clinit>
+com.sinch.verification.internal.VerificationMethod$1 -> com.sinch.verification.a.h:
+    com.sinch.verification.internal.VerificationMethod this$0 -> a
+    void <init>(com.sinch.verification.internal.VerificationMethod) -> <init>
+    void onSuccess(org.json.JSONObject,java.lang.String) -> a
+    void onError(java.lang.Exception) -> a
+com.sinch.verification.internal.VerificationMethod$2 -> com.sinch.verification.a.i:
+    java.lang.String val$source -> a
+    com.sinch.verification.internal.VerificationMethod this$0 -> b
+    void <init>(com.sinch.verification.internal.VerificationMethod,java.lang.String) -> <init>
+    void onSuccess(org.json.JSONObject,java.lang.String) -> a
+    void onError(java.lang.Exception) -> a
+com.sinch.verification.internal.VerificationMethod$3 -> com.sinch.verification.a.j:
+    com.sinch.httpclient.AsyncTaskDelegate val$logger$6d006eaf -> a
+    void <init>(com.sinch.httpclient.AsyncTaskDelegate) -> <init>
+    void run() -> run
+com.sinch.verification.internal.VerificationMethod$4 -> com.sinch.verification.a.k:
+    com.sinch.verification.internal.VerificationMethod this$0 -> a
+    void <init>(com.sinch.verification.internal.VerificationMethod) -> <init>
+    void onSuccess(org.json.JSONObject,java.lang.String) -> a
+    void onError(java.lang.Exception) -> a
+com.sinch.verification.internal.VerificationMethod$5 -> com.sinch.verification.a.l:
+    java.lang.Exception val$e -> a
+    com.sinch.verification.internal.VerificationMethod this$0 -> b
+    void <init>(com.sinch.verification.internal.VerificationMethod,java.lang.Exception) -> <init>
+    void run() -> run
+com.sinch.verification.internal.VerificationMethod$6 -> com.sinch.verification.a.m:
+    java.lang.Exception val$e -> a
+    com.sinch.verification.internal.VerificationMethod this$0 -> b
+    void <init>(com.sinch.verification.internal.VerificationMethod,java.lang.Exception) -> <init>
+    void run() -> run
+com.sinch.verification.internal.VerificationMethod$7 -> com.sinch.verification.a.n:
+    com.sinch.verification.internal.VerificationMethod this$0 -> a
+    void <init>(com.sinch.verification.internal.VerificationMethod) -> <init>
+    void run() -> run
+com.sinch.verification.internal.VerificationMethod$8 -> com.sinch.verification.a.o:
+    com.sinch.verification.InitiationResult val$result -> a
+    com.sinch.verification.internal.VerificationMethod this$0 -> b
+    void <init>(com.sinch.verification.internal.VerificationMethod,com.sinch.verification.InitiationResult) -> <init>
+    void run() -> run
+com.sinch.verification.internal.VerificationMethodConfig -> com.sinch.verification.a.p:
+    com.sinch.verification.Config config -> a
+    java.lang.String number -> b
+    java.lang.String custom -> c
+    com.sinch.verification.internal.apiservice.ApiService apiService -> d
+    com.sinch.httpclient.AsyncTaskDelegate handler$7a6b4f00 -> e
+    com.sinch.httpclient.AsyncTaskDelegate logger$6d006eaf -> f
+    java.util.List languages -> g
+    com.sinch.verification.VerificationListener listener -> h
+    void <init>(com.sinch.verification.Config,java.lang.String,java.lang.String,com.sinch.verification.internal.apiservice.ApiService,com.sinch.httpclient.AsyncTaskDelegate,com.sinch.httpclient.AsyncTaskDelegate,java.util.List,com.sinch.verification.VerificationListener) -> <init>
+    java.lang.String identifierForEnvironmentHost(java.lang.String) -> a
+com.sinch.verification.internal.VerificationMethodConfig$VerificationMethodConfigBuilder -> com.sinch.verification.a.q:
+    com.sinch.verification.Config config -> a
+    java.lang.String number -> b
+    java.lang.String custom -> c
+    com.sinch.verification.internal.apiservice.ApiService apiService -> d
+    com.sinch.httpclient.AsyncTaskDelegate handler$7a6b4f00 -> e
+    com.sinch.httpclient.AsyncTaskDelegate logger$6d006eaf -> f
+    java.util.List languages -> g
+    com.sinch.verification.VerificationListener listener -> h
+    void <init>() -> <init>
+    com.sinch.verification.internal.VerificationMethodConfig build() -> a
+    void nullCheck(java.lang.String,java.lang.Object) -> a
+com.sinch.verification.internal.apiservice.ApiService -> com.sinch.verification.a.a.a:
+    java.lang.String mBaseUrl -> a
+    java.lang.String mAppKey -> b
+    com.sinch.verification.internal.http.HttpService mHttpClient -> c
+    com.sinch.httpclient.Logger mLogger -> d
+    java.nio.charset.Charset UTF8 -> e
+    void <init>(java.lang.String,java.lang.String,com.sinch.verification.internal.http.HttpService,com.sinch.httpclient.AsyncTaskDelegate) -> <init>
+    void request$285fae11(java.lang.String,java.lang.String,org.json.JSONObject,java.util.List,com.sinch.httpclient.AsyncTaskDelegate) -> a
+    org.json.JSONObject tryParseAsJson(byte[]) -> a
+    java.lang.String getLanguage(java.util.Map) -> a
+    java.lang.Exception extractError(int,byte[]) -> a
+    java.lang.String encodePath(java.lang.String) -> a
+    void access$000$69aab4ec$796e056e(com.sinch.httpclient.Response,com.sinch.httpclient.AsyncTaskDelegate) -> a
+    void access$100$641a344a$318854f0(java.lang.Exception,com.sinch.httpclient.AsyncTaskDelegate) -> a
+    void <clinit>() -> <clinit>
+com.sinch.verification.internal.apiservice.ApiService$1 -> com.sinch.verification.a.a.b:
+    com.sinch.httpclient.AsyncTaskDelegate val$replyHandler$5ef461f5 -> a
+    void <init>(com.sinch.httpclient.AsyncTaskDelegate) -> <init>
+    void onSuccess(com.sinch.httpclient.Response) -> a
+    void onError(java.lang.Exception) -> a
+com.sinch.verification.internal.flashcall.CallBroadcastReceiver -> com.sinch.verification.a.b.a:
+    com.sinch.verification.internal.flashcall.FlashCallInterceptor mFlashCallInterceptor -> a
+    android.telephony.TelephonyManager mTelephonyManager -> b
+    com.sinch.httpclient.AsyncTaskDelegate mLogger$6d006eaf -> c
+    boolean $assertionsDisabled -> d
+    void <init>(com.sinch.httpclient.AsyncTaskDelegate,com.sinch.verification.internal.flashcall.FlashCallInterceptor,android.telephony.TelephonyManager) -> <init>
+    void onReceive(android.content.Context,android.content.Intent) -> onReceive
+    void hangUpCall(boolean) -> a
+    void <clinit>() -> <clinit>
+com.sinch.verification.internal.flashcall.CallHistoryObserver -> com.sinch.verification.a.b.b:
+    com.sinch.verification.internal.flashcall.FlashCallInterceptor mFlashCallInterceptor -> a
+    void <init>(com.sinch.verification.internal.flashcall.FlashCallInterceptor,android.os.Handler) -> <init>
+    void onChange(boolean,android.net.Uri) -> onChange
+com.sinch.verification.internal.flashcall.CallHistoryReader -> com.sinch.verification.a.b.c:
+    android.content.ContentResolver mContentResolver -> a
+    android.net.Uri mCallUri -> b
+    com.sinch.httpclient.AsyncTaskDelegate mLogger$6d006eaf -> c
+    void <init>(com.sinch.httpclient.AsyncTaskDelegate,android.content.ContentResolver,android.net.Uri) -> <init>
+    java.util.List readCodeFromHistory(long) -> a
+com.sinch.verification.internal.flashcall.CallTemplateMatcher -> com.sinch.verification.a.b.d:
+    java.util.regex.Pattern mCodePattern -> a
+    void <init>(java.lang.String) -> <init>
+com.sinch.verification.internal.flashcall.FlashCallInterceptor -> com.sinch.verification.a.b.e:
+    android.content.Context mContext -> a
+    com.sinch.httpclient.AsyncTaskDelegate mLogger$6d006eaf -> b
+    com.sinch.httpclient.AsyncTaskDelegate mListener$3f7e7f76 -> c
+    int mInterceptionTimeout -> d
+    int mReportTimeout -> e
+    int mHangupDelay -> f
+    long mLastLogReadTime -> g
+    boolean mRegisteredBroadcastReceiver -> h
+    boolean mRegisteredContentObserver -> i
+    boolean mStarted -> j
+    boolean mInterceptedEarly -> k
+    boolean mInterceptedLate -> l
+    boolean mPastInterceptionTimeout -> m
+    com.sinch.verification.internal.flashcall.CallBroadcastReceiver mCallReceiver -> n
+    android.os.Handler mCancelHandler -> o
+    com.sinch.verification.internal.flashcall.CallHistoryReader mCallHistoryReader -> p
+    com.sinch.verification.internal.flashcall.CallTemplateMatcher mTemplateMatcher -> q
+    int mInitialCallState -> r
+    com.sinch.verification.internal.flashcall.CallHistoryObserver mCallHistoryObserver -> s
+    android.content.ContentResolver mContentResolver -> t
+    com.sinch.verification.internal.ReportMetadata mReportMetadata -> u
+    boolean $assertionsDisabled -> v
+    com.sinch.verification.internal.flashcall.FlashCallInterceptor create$2705565(android.content.Context,com.sinch.httpclient.AsyncTaskDelegate,com.sinch.httpclient.AsyncTaskDelegate,com.sinch.verification.internal.flashcall.CallTemplateMatcher,int,int,int,long,int) -> a
+    void <init>(android.content.Context,com.sinch.httpclient.AsyncTaskDelegate,com.sinch.httpclient.AsyncTaskDelegate,com.sinch.verification.internal.flashcall.CallTemplateMatcher,int,int,int,long,int) -> <init>
+    void start() -> k
+    void stop() -> b
+    void onCall(java.lang.String,java.lang.String) -> a
+    void checkCallHistory() -> c
+    void onError(java.lang.String) -> a
+    com.sinch.httpclient.AsyncTaskDelegate access$000$17aea6d9(com.sinch.verification.internal.flashcall.FlashCallInterceptor) -> a
+    boolean access$100(com.sinch.verification.internal.flashcall.FlashCallInterceptor) -> b
+    void access$200(com.sinch.verification.internal.flashcall.FlashCallInterceptor,java.lang.String) -> a
+    boolean access$302$38a73f36(com.sinch.verification.internal.flashcall.FlashCallInterceptor) -> c
+    boolean access$400(com.sinch.verification.internal.flashcall.FlashCallInterceptor) -> d
+    com.sinch.verification.internal.flashcall.CallBroadcastReceiver access$500(com.sinch.verification.internal.flashcall.FlashCallInterceptor) -> e
+    void <clinit>() -> <clinit>
+com.sinch.verification.internal.flashcall.FlashCallInterceptor$HangupDelayAction -> com.sinch.verification.a.b.f:
+    com.sinch.verification.internal.flashcall.FlashCallInterceptor this$0 -> a
+    void <init>(com.sinch.verification.internal.flashcall.FlashCallInterceptor) -> <init>
+    void run() -> run
+    void <init>(com.sinch.verification.internal.flashcall.FlashCallInterceptor,byte) -> <init>
+com.sinch.verification.internal.flashcall.FlashCallInterceptor$InterceptionTimeoutAction -> com.sinch.verification.a.b.g:
+    com.sinch.verification.internal.flashcall.FlashCallInterceptor this$0 -> a
+    void <init>(com.sinch.verification.internal.flashcall.FlashCallInterceptor) -> <init>
+    void run() -> run
+    void <init>(com.sinch.verification.internal.flashcall.FlashCallInterceptor,byte) -> <init>
+com.sinch.verification.internal.flashcall.FlashCallInterceptor$ReportTimeoutAction -> com.sinch.verification.a.b.h:
+    com.sinch.verification.internal.flashcall.FlashCallInterceptor this$0 -> a
+    void <init>(com.sinch.verification.internal.flashcall.FlashCallInterceptor) -> <init>
+    void run() -> run
+    void <init>(com.sinch.verification.internal.flashcall.FlashCallInterceptor,byte) -> <init>
+com.sinch.verification.internal.flashcall.FlashCallVerificationMethod -> com.sinch.verification.a.b.i:
+    java.lang.String TAG -> g
+    com.sinch.httpclient.AsyncTaskDelegate mInterceptor$c3d4ce0 -> h
+    int mInitialCallState -> i
+    void <init>(com.sinch.verification.internal.VerificationMethodConfig) -> <init>
+    void beforeInitiate() -> b
+    void onVerificationInit(org.json.JSONObject,java.lang.String) -> b
+    org.json.JSONObject createInitParameters() -> c
+    org.json.JSONObject createVerifyParameters(java.lang.String,java.lang.String) -> b
+    org.json.JSONObject createReportParameters(boolean,boolean,org.json.JSONObject) -> b
+    void onCodeIntercepted(java.lang.String,java.lang.String) -> c
+    int getTimeout$28e5858c(com.sinch.httpclient.AsyncTaskDelegate,org.json.JSONObject,java.lang.String,int) -> a
+    void <clinit>() -> <clinit>
+com.sinch.verification.internal.http.AndroidConnectivityMonitor -> com.sinch.verification.a.c.a:
+    android.content.Context mContext -> a
+    com.sinch.httpclient.AsyncTaskDelegate mLogger$6d006eaf -> b
+    boolean mHavePermission -> c
+    java.util.concurrent.atomic.AtomicBoolean mRegistered -> d
+    java.util.concurrent.CopyOnWriteArraySet mListeners -> e
+    java.util.concurrent.atomic.AtomicInteger mListenerInterestCount -> f
+    boolean $assertionsDisabled -> g
+    void <init>(android.content.Context,com.sinch.httpclient.AsyncTaskDelegate) -> <init>
+    void registerListener$6b7fae1b(com.sinch.httpclient.AsyncTaskDelegate) -> b
+    void unregisterListener$6b7fae1b(com.sinch.httpclient.AsyncTaskDelegate) -> c
+    void onReceive(android.content.Context,android.content.Intent) -> onReceive
+    void <clinit>() -> <clinit>
+com.sinch.verification.internal.http.ConnectivityInfoProvider -> com.sinch.verification.a.c.b:
+    void <init>() -> <init>
+com.sinch.verification.internal.http.DefaultGlobalHttpServiceFactory -> com.sinch.verification.a.c.c:
+    boolean $assertionsDisabled -> a
+    void prepareGlobalHttpServiceIfNecessary(android.content.Context) -> a
+    void <init>() -> <init>
+    com.sinch.verification.internal.http.HttpService createHttpService(java.lang.Object) -> c
+    void <clinit>() -> <clinit>
+com.sinch.verification.internal.http.GlobalHttpService$LazyHolder -> com.sinch.verification.a.c.d:
+    com.sinch.verification.internal.http.HttpService sService -> a
+    com.sinch.verification.internal.http.HttpService access$000() -> a
+    void <clinit>() -> <clinit>
+com.sinch.verification.internal.http.GlobalHttpServiceInit -> com.sinch.verification.a.c.e:
+    java.util.concurrent.atomic.AtomicBoolean sPrepared -> a
+    java.lang.Object sContext -> b
+    com.sinch.httpclient.AsyncTaskDelegate sFactory$71250a8 -> c
+    boolean $assertionsDisabled -> d
+    void prepare$5cea8f69(java.lang.Object,com.sinch.httpclient.AsyncTaskDelegate) -> a
+    boolean isPrepared() -> a
+    com.sinch.verification.internal.http.HttpService createHttpService() -> b
+    void <init>() -> <init>
+    void <clinit>() -> <clinit>
+com.sinch.verification.internal.http.HttpService -> com.sinch.verification.a.c.f:
+    com.sinch.httpclient.HttpClient mClient -> a
+    void sendRequest$30fa8e43(com.sinch.httpclient.Request,com.sinch.httpclient.AsyncTaskDelegate,com.sinch.httpclient.RequestOptions) -> a
+    void <init>(com.sinch.httpclient.HttpClient) -> <init>
+com.sinch.verification.internal.logging.AggregateLogger -> com.sinch.verification.a.d.a:
+    java.util.ArrayList mLoggers -> a
+    void <init>() -> <init>
+    void addCommonExtra(java.lang.String,java.lang.String) -> d
+    void flush() -> l
+    void finish() -> m
+    void d(java.lang.String,java.lang.String) -> e
+    void w(java.lang.String,java.lang.String) -> f
+    void e(java.lang.String,java.lang.String) -> g
+    void i(java.lang.String,java.lang.String) -> h
+    void log(int,java.lang.String,java.lang.String,java.util.Map) -> a
+com.sinch.verification.internal.logging.AggregateLogger$Entry -> com.sinch.verification.a.d.b:
+    com.sinch.httpclient.AsyncTaskDelegate logger$6d006eaf -> a
+    boolean mIsSticky -> b
+    void <init>(com.sinch.httpclient.AsyncTaskDelegate,boolean) -> <init>
+com.sinch.verification.internal.logging.BaseLogger -> com.sinch.verification.a.d.c:
+    java.util.concurrent.ConcurrentMap mCommonExtra -> a
+    void <init>() -> <init>
+    void d(java.lang.String,java.lang.String) -> e
+    void w(java.lang.String,java.lang.String) -> f
+    void e(java.lang.String,java.lang.String) -> g
+    void i(java.lang.String,java.lang.String) -> h
+    void addCommonExtra(java.lang.String,java.lang.String) -> d
+    void finish() -> m
+    void log(int,java.lang.String,java.util.Map) -> a
+    void log(int,java.lang.String,java.lang.String,java.util.Map) -> a
+com.sinch.verification.internal.logging.ExternalLoggerAdapter -> com.sinch.verification.a.d.d:
+    com.sinch.verification.Logger mLogger -> a
+    boolean $assertionsDisabled -> b
+    void <init>(com.sinch.verification.Logger) -> <init>
+    void addCommonExtra(java.lang.String,java.lang.String) -> d
+    void d(java.lang.String,java.lang.String) -> e
+    void w(java.lang.String,java.lang.String) -> f
+    void e(java.lang.String,java.lang.String) -> g
+    void i(java.lang.String,java.lang.String) -> h
+    void log(int,java.lang.String,java.lang.String,java.util.Map) -> a
+    void flush() -> l
+    void finish() -> m
+    void <clinit>() -> <clinit>
+com.sinch.verification.internal.logging.LogcatLogger -> com.sinch.verification.a.d.e:
+    boolean $assertionsDisabled -> a
+    void <init>() -> <init>
+    java.lang.String combineMessage(java.lang.String,java.util.Map) -> a
+    void log(int,java.lang.String,java.util.Map) -> a
+    void flush() -> l
+    void <clinit>() -> <clinit>
+com.sinch.verification.internal.logging.Logging -> com.sinch.verification.a.d.f:
+    java.util.concurrent.locks.Lock sGlobalExternalLoggerLock -> a
+    com.sinch.verification.Logger sGlobalExternalLogger -> b
+    com.sinch.httpclient.AsyncTaskDelegate createInternalLogger$428b3052() -> a
+    void setGlobalExternalLogger(com.sinch.verification.Logger) -> a
+    void <clinit>() -> <clinit>
+com.sinch.verification.internal.logging.sanalytics.DeviceInfoProvider -> com.sinch.verification.a.d.a.a:
+    void <init>() -> <init>
+    java.lang.Object newInstance(java.lang.Object) -> newInstance
+com.sinch.verification.internal.logging.sanalytics.DeviceInfoProvider$DeviceInfoImpl -> com.sinch.verification.a.d.a.b:
+    android.content.Context mContext -> a
+    com.sinch.httpclient.AsyncTaskDelegate mLogger$6d006eaf -> b
+    void <init>(android.content.Context) -> <init>
+    java.lang.String platformVersion() -> platformVersion
+    java.lang.String locale() -> locale
+    java.util.List MCCs() -> MCCs
+com.sinch.verification.internal.logging.sanalytics.FallbackLogger -> com.sinch.verification.a.d.a.c:
+    boolean $assertionsDisabled -> a
+    void <init>() -> <init>
+    void log(com.sinch.sanalytics.client.LogSeverity,java.lang.String) -> log
+    void log(com.sinch.sanalytics.client.LogSeverity,java.util.Map) -> log
+    void log(com.sinch.sanalytics.client.LogSeverity,java.lang.String,java.util.Map) -> log
+    void _log(com.sinch.sanalytics.client.LogSeverity,java.lang.String) -> a
+    void <clinit>() -> <clinit>
+com.sinch.verification.internal.logging.sanalytics.FallbackLogger$1 -> com.sinch.verification.a.d.a.d:
+    int[] $SwitchMap$com$sinch$sanalytics$client$LogSeverity -> a
+    void <clinit>() -> <clinit>
+com.sinch.verification.internal.logging.sanalytics.GlobalSanalytics$LazyHolder -> com.sinch.verification.a.d.a.e:
+    com.sinch.verification.internal.logging.sanalytics.SanalyticsClientManager sManager -> a
+    com.sinch.verification.internal.logging.sanalytics.SanalyticsClientManager access$000() -> a
+    void <clinit>() -> <clinit>
+com.sinch.verification.internal.logging.sanalytics.HttpClientProvider -> com.sinch.verification.a.d.a.f:
+    java.lang.ref.WeakReference mHttpServiceRef -> a
+    com.sinch.httpclient.Logger mLogger -> b
+    boolean $assertionsDisabled -> c
+    void <init>(com.sinch.verification.internal.http.HttpService) -> <init>
+    int priorityForRequestUrl(java.net.URL) -> a
+    boolean isNonEmptyString(java.lang.String) -> a
+    java.lang.Object newInstance(java.lang.Object) -> newInstance
+    java.lang.ref.WeakReference access$000(com.sinch.verification.internal.logging.sanalytics.HttpClientProvider) -> a
+    java.lang.String access$100(java.util.Map) -> a
+    com.sinch.httpclient.Logger access$200(com.sinch.verification.internal.logging.sanalytics.HttpClientProvider) -> b
+    void <clinit>() -> <clinit>
+com.sinch.verification.internal.logging.sanalytics.HttpClientProvider$DefaultHttpClient -> com.sinch.verification.a.d.a.g:
+    com.sinch.verification.internal.logging.sanalytics.HttpClientProvider this$0 -> a
+    void <init>(com.sinch.verification.internal.logging.sanalytics.HttpClientProvider) -> <init>
+    void sendHttpRequest(java.lang.String,java.lang.String,java.util.Map,byte[],com.sinch.sanalytics.client.HttpRequestCallback) -> sendHttpRequest
+    void <clinit>() -> <clinit>
+com.sinch.verification.internal.logging.sanalytics.HttpClientProvider$DefaultHttpClient$1 -> com.sinch.verification.a.d.a.h:
+    com.sinch.sanalytics.client.HttpRequestCallback val$callback -> a
+    void <init>(com.sinch.sanalytics.client.HttpRequestCallback) -> <init>
+    void onSuccess(com.sinch.httpclient.Response) -> a
+    void onError(java.lang.Exception) -> a
+com.sinch.verification.internal.logging.sanalytics.SanalyticsClientManager -> com.sinch.verification.a.d.a.i:
+    java.util.concurrent.ConcurrentMap mActiveClients -> a
+    com.sinch.sanalytics.client.Logger mFallbackLogger -> b
+    boolean mNativeLoggingEnabled -> c
+    com.sinch.verification.internal.logging.sanalytics.SanalyticsConfig mConfig -> d
+    void <init>() -> <init>
+    com.sinch.sanalytics.client.Client createClient(android.content.Context,java.lang.String) -> a
+com.sinch.verification.internal.logging.sanalytics.SanalyticsConfig -> com.sinch.verification.a.d.a.j:
+    java.lang.String mLogSessionId -> a
+    java.lang.String mDatabaseDirectory -> b
+    java.lang.String mDeviceId -> c
+    void <init>(android.content.Context) -> <init>
+com.sinch.verification.internal.logging.sanalytics.SanalyticsLogger -> com.sinch.verification.a.d.a.k:
+    com.sinch.sanalytics.client.Logger mDelegateLogger -> a
+    java.lang.String mApplicationKey -> b
+    java.util.concurrent.atomic.AtomicBoolean mFinalized -> c
+    void <init>(android.content.Context,java.lang.String) -> <init>
+    void log(int,java.lang.String,java.util.Map) -> a
+    void flush() -> l
+    void finish() -> m
+com.sinch.verification.internal.siminfo.DefaultMultipleSimInfoProvider -> com.sinch.verification.a.e.a:
+    android.telephony.SubscriptionManager mSubscriptionManager -> a
+    java.util.List mSimInfos -> b
+    android.telephony.TelephonyManager mTelephony -> c
+    com.sinch.httpclient.AsyncTaskDelegate mLogger$6d006eaf -> d
+    void <init>(android.content.Context,com.sinch.httpclient.AsyncTaskDelegate) -> <init>
+    void <init>(android.content.Context,com.sinch.httpclient.AsyncTaskDelegate,android.telephony.SubscriptionManager) -> <init>
+    java.lang.Object getSimInfoBySubscription(java.lang.String,int) -> a
+    java.util.List getSimCardInfos() -> n
+com.sinch.verification.internal.siminfo.MultipleSimInfoProviderReflective -> com.sinch.verification.a.e.b:
+    android.telephony.TelephonyManager mTelephony -> a
+    java.util.List mSimInfos -> b
+    com.sinch.httpclient.AsyncTaskDelegate mLogger$6d006eaf -> c
+    android.content.Context mContext -> d
+    void <init>(android.content.Context,com.sinch.httpclient.AsyncTaskDelegate) -> <init>
+    java.util.List getSimCardInfos() -> n
+    com.sinch.verification.internal.siminfo.SimInfo getSimInfo(int) -> a
+    com.sinch.verification.internal.siminfo.SimInfo getSimInfoWithMultiSimTelephonyManager(int) -> b
+    com.sinch.verification.internal.siminfo.SimInfo getSimInfoWithMethodsSuffix(java.lang.String,int) -> a
+    java.lang.String getSimTelephonyInfo(java.lang.reflect.Method,java.lang.Object,java.lang.Object[]) -> a
+    com.sinch.verification.internal.siminfo.OptionalBoolean getBooleanSimTelephonyInfo(java.lang.reflect.Method,java.lang.Object) -> a
+    java.lang.Object getTelephonyInfoBySlot(java.lang.reflect.Method,java.lang.Object,java.lang.Object[]) -> b
+    java.lang.reflect.Method getTelephonyMethod(java.lang.Class,java.lang.String,java.lang.Class[]) -> a
+com.sinch.verification.internal.siminfo.OptionalBoolean -> com.sinch.verification.a.e.c:
+    com.sinch.verification.internal.siminfo.OptionalBoolean TRUE -> b
+    com.sinch.verification.internal.siminfo.OptionalBoolean FALSE -> c
+    com.sinch.verification.internal.siminfo.OptionalBoolean UNKNOWN -> a
+    com.sinch.verification.internal.siminfo.OptionalBoolean[] $VALUES -> d
+    com.sinch.verification.internal.siminfo.OptionalBoolean[] values() -> values
+    com.sinch.verification.internal.siminfo.OptionalBoolean valueOf(java.lang.String) -> valueOf
+    void <init>(java.lang.String,int) -> <init>
+    com.sinch.verification.internal.siminfo.OptionalBoolean fromBoolean(boolean) -> a
+    boolean isKnown(com.sinch.verification.internal.siminfo.OptionalBoolean) -> a
+    boolean toBoolean(com.sinch.verification.internal.siminfo.OptionalBoolean) -> b
+    void <clinit>() -> <clinit>
+com.sinch.verification.internal.siminfo.SimInfo -> com.sinch.verification.a.e.d:
+    java.lang.String simCountryIso -> a
+    java.lang.String simOperatorMCC -> b
+    java.lang.String simOperatorMNC -> c
+    java.lang.String networkOperatorMCC -> d
+    java.lang.String networkOperatorMNC -> e
+    java.lang.String networkOperatorName -> f
+    java.lang.String networkCountryIso -> g
+    java.lang.String MSISDN -> h
+    com.sinch.verification.internal.siminfo.OptionalBoolean networkIsRoaming -> i
+    void <init>() -> <init>
+    void setNetworkMccMnc(java.lang.String) -> a
+    void setSimMccMnc(java.lang.String) -> b
+    java.lang.String toString() -> toString
+com.sinch.verification.internal.siminfo.SingleSimInfoProvider -> com.sinch.verification.a.e.e:
+    java.util.List mSimInfos -> a
+    void <init>(android.content.Context,com.sinch.httpclient.AsyncTaskDelegate) -> <init>
+    java.util.List getSimCardInfos() -> n
+com.sinch.verification.internal.sms.SmsBroadcastReceiver -> com.sinch.verification.a.f.a:
+    com.sinch.verification.internal.sms.SmsInterceptor mSmsInterceptor -> a
+    void <init>(com.sinch.verification.internal.sms.SmsInterceptor) -> <init>
+    void onReceive(android.content.Context,android.content.Intent) -> onReceive
+com.sinch.verification.internal.sms.SmsHistoryObserver -> com.sinch.verification.a.f.b:
+    com.sinch.verification.internal.sms.SmsInterceptor mSmsInterceptor -> a
+    void <init>(com.sinch.verification.internal.sms.SmsInterceptor,android.os.Handler) -> <init>
+    void onChange(boolean,android.net.Uri) -> onChange
+com.sinch.verification.internal.sms.SmsHistoryReader -> com.sinch.verification.a.f.c:
+    android.content.ContentResolver mContentResolver -> a
+    android.net.Uri mSmsUri -> b
+    com.sinch.httpclient.AsyncTaskDelegate mLogger$6d006eaf -> c
+    void <init>(com.sinch.httpclient.AsyncTaskDelegate,android.content.ContentResolver,android.net.Uri) -> <init>
+    java.util.List readCodeFromHistory(long) -> a
+com.sinch.verification.internal.sms.SmsInterceptor -> com.sinch.verification.a.f.d:
+    android.net.Uri mSmsUri -> b
+    com.sinch.verification.internal.sms.SmsHistoryObserver mSmsHistoryObserver -> c
+    android.content.ContentResolver mContentResolver -> d
+    android.content.Context mContext -> e
+    com.sinch.httpclient.AsyncTaskDelegate mLogger$6d006eaf -> f
+    com.sinch.httpclient.AsyncTaskDelegate mListener$3f7e7f76 -> g
+    int mReportTimeout -> h
+    long mLastLogReadTime -> i
+    boolean mRegisteredBroadcastReceiver -> j
+    boolean mRegisteredContentObserver -> k
+    boolean mStarted -> a
+    boolean mIntercepted -> l
+    android.content.BroadcastReceiver mSmsReceiver -> m
+    android.os.Handler mCancelHandler -> n
+    com.sinch.verification.internal.sms.SmsHistoryReader mSmsHistoryReader -> o
+    com.sinch.verification.internal.sms.SmsTemplateMatcher mTemplateMatcher -> p
+    void <init>(android.content.Context,com.sinch.httpclient.AsyncTaskDelegate,com.sinch.httpclient.AsyncTaskDelegate,com.sinch.verification.internal.sms.SmsTemplateMatcher,long) -> <init>
+    void start() -> k
+    void stop() -> b
+    void onSmsMessage(java.lang.String,java.lang.String) -> a
+    void checkSmsHistory() -> c
+    void onError(java.lang.String) -> a
+com.sinch.verification.internal.sms.SmsInterceptor$1 -> com.sinch.verification.a.f.e:
+    com.sinch.verification.internal.sms.SmsInterceptor this$0 -> a
+    void <init>(com.sinch.verification.internal.sms.SmsInterceptor) -> <init>
+    void run() -> run
+com.sinch.verification.internal.sms.SmsTemplateMatcher -> com.sinch.verification.a.f.f:
+    java.util.regex.Pattern mCodePattern -> a
+    void <init>(java.lang.String) -> <init>
+com.sinch.verification.internal.sms.SmsVerificationMethod -> com.sinch.verification.a.f.g:
+    com.sinch.httpclient.AsyncTaskDelegate mInterceptor$c3d4ce0 -> g
+    void <init>(com.sinch.verification.internal.VerificationMethodConfig) -> <init>
+    void beforeInitiate() -> b
+    void onVerificationInit(org.json.JSONObject,java.lang.String) -> b
+    org.json.JSONObject createInitParameters() -> c
+    org.json.JSONObject createVerifyParameters(java.lang.String,java.lang.String) -> b
+    org.json.JSONObject createReportParameters(boolean,boolean,org.json.JSONObject) -> b
+    void onCodeIntercepted(java.lang.String,java.lang.String) -> c
+    void <clinit>() -> <clinit>

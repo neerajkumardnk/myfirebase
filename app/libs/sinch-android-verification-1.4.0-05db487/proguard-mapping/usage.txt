@@ -1,0 +1,198 @@
+com.sinch.httpclient.AsyncTaskDelegate:
+    public abstract void onPreExecute()
+com.sinch.httpclient.AsyncTaskRequest$TaskImpl:
+    private static final int CONNECT_TIMEOUT
+    private static final int READ_TIMEOUT
+    130:130:public void onPreExecute()
+com.sinch.httpclient.BuildConfig
+com.sinch.httpclient.HttpClient:
+    private static final int PRIORITY_CMP_LT
+    private static final int PRIORITY_CMP_GT
+    private static final java.lang.String TAG
+com.sinch.httpclient.HttpRequestProcessor:
+    private static final int RESPONSE_BUFFER_SIZE
+com.sinch.httpclient.RequestOptions:
+    public static final int PRIORITY_LOW
+    public static final int PRIORITY_NORMAL
+    public static final int PRIORITY_HIGH
+com.sinch.verification.internal.AndroidCallbackHandler:
+    31:31:public void postDelayed(java.lang.Runnable,int)
+com.sinch.verification.internal.ApiLevelUtils:
+    5:5:public ApiLevelUtils()
+com.sinch.verification.internal.BuildFlavorFacade:
+    62:64:private BuildFlavorFacade()
+com.sinch.verification.internal.CallbackHandler:
+    public abstract void postDelayed(java.lang.Runnable,int)
+com.sinch.verification.internal.DefaultConfig:
+    63:64:public void setInternalParameter(java.lang.String,java.lang.Object)
+com.sinch.verification.internal.Interceptor:
+    public abstract void stop()
+com.sinch.verification.internal.InterceptorFactory
+com.sinch.verification.internal.InternalVerification:
+    public abstract void report(boolean,boolean,org.json.JSONObject)
+com.sinch.verification.internal.MetadataUtils:
+    11:11:public MetadataUtils()
+com.sinch.verification.internal.PermissionsChecks:
+    public static final java.lang.String PERMISSION_READ_PHONE_STATE
+    public static final java.lang.String PERMISSION_READ_CALL_LOG
+    public static final java.lang.String PERMISSION_CALL_PHONE
+    public static final java.lang.String PERMISSION_READ_SMS
+    public static final java.lang.String PERMISSION_RECEIVE_SMS
+    public static final java.lang.String PERMISSION_ACCESS_NETWORK_STATE
+    public static final java.lang.String PERMISSION_GET_CELL_SIGNAL_LEVEL
+    11:11:public PermissionsChecks()
+com.sinch.verification.internal.PhoneMetadata:
+    public static final java.lang.String TAG
+    private static final int METADATA_VERSION_NUMBER
+    public static final java.lang.String OS
+    public static final java.lang.String MNC
+    public static final java.lang.String MCC
+    public static final java.lang.String SDK
+    public static final java.lang.String SIM
+    public static final java.lang.String DATA
+    public static final java.lang.String MODEL
+    public static final java.lang.String ROAMING
+    public static final java.lang.String CELLULAR
+    public static final java.lang.String PLATFORM
+    public static final java.lang.String OPERATOR
+    public static final java.lang.String METADATA
+    public static final java.lang.String NETWORK_NAME
+    public static final java.lang.String DEVICE_ID
+    public static final java.lang.String SIM_STATE
+    public static final java.lang.String COUNTRY_ID
+    public static final java.lang.String DATA_NETWORK_TYPE
+    public static final java.lang.String PERMISSIONS
+    public static final java.lang.String NETWORK_INFO
+    public static final java.lang.String BUILD_FLAVOR
+    public static final java.lang.String MANUFACTURER
+    public static final java.lang.String BATTERY_LEVEL
+    public static final java.lang.String SIM_CARDS_INFO
+    public static final java.lang.String DEFAULT_LOCALE
+    public static final java.lang.String VOICE_CAPABLE
+    public static final java.lang.String SIM_CARDS_COUNT
+    public static final java.lang.String MSISDN_MATCHES_INPUT
+    private static final java.lang.String DEVICE_ID_ILLEGAL_ANDROID_ID_1
+    private static final java.lang.String DEVICE_ID_ILLEGAL_ANDROID_ID_2
+    36:36:public PhoneMetadata()
+com.sinch.verification.internal.PhoneNumberUtilsReflective:
+    private static final java.lang.String TAG
+    private static final java.lang.String METHOD_GETASYOUTYPEFORMATTER
+    private static final java.lang.String FIELD_FORMATTER
+    private static final java.lang.String CLASS_PHONENUMBERUTIL
+    private static final java.lang.String METHOD_FORMAT
+    private static final java.lang.String METHOD_PARSE
+    private static final java.lang.String METHOD_ISPOSSIBLENUMBER
+    private static final java.lang.String ENUM_PHONENUMBERFORMAT
+    private static final java.lang.String CLASS_PHONENUMBER
+    private static final java.lang.String VALUE_E164
+    private static final java.lang.String METHOD_GETINSTANCE
+    15:15:public PhoneNumberUtilsReflective()
+com.sinch.verification.internal.ReflectionUtils:
+    8:11:public ReflectionUtils()
+com.sinch.verification.internal.ReportMetadata:
+    private static final java.lang.String TAG
+    public static final java.lang.String LATE_CODES
+    private static final int MAX_SENSIBLE_LATE_CODES
+com.sinch.verification.internal.VerificationCodeSource
+com.sinch.verification.internal.VerificationMethod:
+    private static final java.lang.String TAG
+    protected static final java.lang.String RUID
+    protected static final java.lang.String SINCH_ENV
+    private static final long LOGGER_FINALIZE_LINGER_TIME_MS
+com.sinch.verification.internal.VerificationMethodConfig:
+    47:47:public java.lang.String getApplicationKey()
+com.sinch.verification.internal.apiservice.ApiService:
+    private static final java.lang.String TAG
+    private static final java.lang.String DEFAULT_LANGUAGE
+    private static final java.lang.String LANGUAGE_KEY
+com.sinch.verification.internal.flashcall.CallBroadcastReceiver:
+    private static final java.lang.String TAG
+com.sinch.verification.internal.flashcall.CallHistoryReader:
+    private static final java.lang.String TAG
+com.sinch.verification.internal.flashcall.FlashCallInterceptor:
+    private static final java.lang.String TAG
+    private static final java.lang.String NULL_NUMBER
+    67:67:public static com.sinch.verification.internal.flashcall.FlashCallInterceptor create(android.content.Context,com.sinch.verification.internal.logging.Logger,com.sinch.verification.internal.CodeInterceptionListener,com.sinch.verification.internal.flashcall.CallTemplateMatcher,com.sinch.verification.internal.flashcall.CallBroadcastReceiver,int,int,int,long,int)
+com.sinch.verification.internal.flashcall.FlashCallVerificationMethod:
+    static final int DEFAULT_INTERCEPTION_TIMEOUT
+    static final int DEFAULT_REPORT_TIMEOUT
+    static final int DEFAULT_HANGUP_DELAY
+    private static final int CALL_STATE_UNKNOWN
+    public static final java.lang.String INTERCEPTION_TIMEOUT_NAME
+    public static final java.lang.String REPORT_TIMEOUT_NAME
+    public static final java.lang.String HANGUP_DELAY_NAME
+    48:50:FlashCallVerificationMethod(com.sinch.verification.internal.VerificationMethodConfig,com.sinch.verification.internal.Interceptor)
+com.sinch.verification.internal.http.AndroidConnectivityMonitor:
+    private static final java.lang.String TAG
+    58:59:public AndroidConnectivityMonitor(android.content.Context,com.sinch.verification.internal.logging.Logger)
+com.sinch.verification.internal.http.GlobalHttpService:
+    13:15:public GlobalHttpService()
+com.sinch.verification.internal.http.GlobalHttpService$LazyHolder:
+    15:15:private GlobalHttpService$LazyHolder()
+com.sinch.verification.internal.logging.BaseLogger:
+    protected static final java.lang.String EXTRA_KEY_TAG
+com.sinch.verification.internal.logging.Logging:
+    10:10:public Logging()
+com.sinch.verification.internal.logging.sanalytics.DeviceInfoProvider:
+    private static final java.lang.String TAG
+com.sinch.verification.internal.logging.sanalytics.FallbackLogger:
+    private static final java.lang.String TAG
+com.sinch.verification.internal.logging.sanalytics.GlobalSanalytics:
+    11:13:private GlobalSanalytics()
+com.sinch.verification.internal.logging.sanalytics.GlobalSanalytics$LazyHolder:
+    15:15:private GlobalSanalytics$LazyHolder()
+com.sinch.verification.internal.logging.sanalytics.SanalyticsClientManager:
+    private static final java.lang.String TAG
+com.sinch.verification.internal.logging.sanalytics.SanalyticsConfig:
+    private static final java.lang.String BASE_URL
+    private static final int FLUSH_INTERVAL
+com.sinch.verification.internal.logging.sanalytics.SanalyticsLogger:
+    private static final java.lang.String TAG
+com.sinch.verification.internal.siminfo.CellNetworkInfo:
+    private static final java.lang.String TAG
+    public static final java.lang.String CELLULAR_TYPE
+    public static final java.lang.String CELL_NETWORK_GSM
+    public static final java.lang.String CELL_NETWORK_LTE
+    public static final java.lang.String CELL_NETWORK_CDMA
+    public static final java.lang.String CELL_NETWORK_WCDMA
+    public static final java.lang.String CELLULAR_SIGNAL_LEVEL
+    21:21:public CellNetworkInfo()
+com.sinch.verification.internal.siminfo.DefaultMultipleSimInfoProvider:
+    private static final java.lang.String TAG
+    private static final java.lang.String GET_SIM_OPERATOR
+    private static final java.lang.String GET_SIM_COUNTRY_ISO
+com.sinch.verification.internal.siminfo.DefaultSimInfoProvider:
+    private static final java.lang.String TAG
+    10:10:public DefaultSimInfoProvider()
+com.sinch.verification.internal.siminfo.MultipleSimInfoProviderReflective:
+    private static final java.lang.String TAG
+    private static final java.lang.String GEMINI_SUFFIX
+    private static final java.lang.String NO_SUFFIX
+    public static final java.lang.String GET_SIM_OPERATOR
+    public static final java.lang.String GET_SIM_COUNTRY_ISO
+    public static final java.lang.String GET_NETWORK_OPERATOR
+    public static final java.lang.String GET_NETWORK_COUNTRY_ISO
+    public static final java.lang.String GET_NETWORK_OPERATOR_NAME
+    public static final java.lang.String IS_NETWORK_ROAMING
+    public static final java.lang.String GET_SIM_STATE
+    public static final java.lang.String GET_LINE1_NUMBER
+    public static final java.lang.String ANDROID_TELEPHONY_MULTI_SIM_TELEPHONY_MANAGER
+    private static final int MAX_SENSIBLE_SIMS
+com.sinch.verification.internal.siminfo.SingleSimInfoProvider:
+    private static final java.lang.String TAG
+com.sinch.verification.internal.siminfo.WcdmaNetworkInfo:
+    12:12:public WcdmaNetworkInfo()
+com.sinch.verification.internal.sms.SmsBroadcastReceiver:
+    static final java.lang.String TAG
+com.sinch.verification.internal.sms.SmsHistoryReader:
+    private static final java.lang.String TAG
+    private static final java.lang.String DATE_COLUMN
+    private static final java.lang.String BODY_COLUMN
+com.sinch.verification.internal.sms.SmsInterceptor:
+    private static final java.lang.String ANDROID_PROVIDER_TELEPHONY_SMS_RECEIVED
+    private static final java.lang.String TAG
+com.sinch.verification.internal.sms.SmsTemplateMatcher:
+    private static final java.lang.String CODE_PATTERN
+com.sinch.verification.internal.sms.SmsVerificationMethod:
+    private static final int DEFAULT_REPORT_TIMEOUT
+    30:32:SmsVerificationMethod(com.sinch.verification.internal.VerificationMethodConfig,com.sinch.verification.internal.Interceptor)

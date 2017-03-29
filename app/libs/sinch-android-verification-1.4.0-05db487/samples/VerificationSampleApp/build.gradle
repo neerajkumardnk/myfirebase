@@ -1,0 +1,50 @@
+apply plugin: 'com.android.application'
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.1.2'
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+        flatDir {
+            dirs 'libs'
+        }
+    }
+}
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.3"
+
+    defaultConfig {
+        minSdkVersion 14
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+    lintOptions {
+        checkReleaseBuilds false
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        
+           // Use same signing config as debug
+           // for easy local development.
+           signingConfig signingConfigs.debug
+        }
+    }
+}
+
+dependencies {
+    compile 'com.android.support:support-v4:23.0.+'
+    compile(name:'sinch-android-verification-1.4.0', ext:'aar')
+}
